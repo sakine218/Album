@@ -216,7 +216,7 @@ Touch the screen</string>
                     <navigationItem key="navigationItem" title="プレビュー" id="hBX-C3-R2J"/>
                     <connections>
                         <outlet property="imageView" destination="7o5-uc-D7h" id="cJn-Cl-TC1"/>
-                        <outlet property="sideScroller" destination="Zee-4x-5Ph" id="vKQ-A0-Hku"/>
+                        <outlet property="scrollView" destination="Zee-4x-5Ph" id="R8V-0B-uYX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5b-xn-2NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
