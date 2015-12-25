@@ -18,6 +18,7 @@
 
 @property (nonatomic, weak)IBOutlet UIImageView *imageView;
 @property (nonatomic)NSArray *imageArray;
+@property (nonatomic)NSArray *photoimageArray;
 @property (nonatomic)AVAssetWriter *videoWriter;
 @property(nonatomic) AVAudioPlayer *audioPlayer;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;

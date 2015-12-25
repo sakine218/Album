@@ -13,8 +13,12 @@
 #define BUTTON_WIDTH 80
 #define BUTTON_HEIGHT 80
 #import <AVFoundation/AVFoundation.h>
+#import "DMMovieMaker.h"
 
 @interface AnimationViewController ()<UIScrollViewDelegate>
+
+@property UISlider      *audioVolumeSlider;
+
 
 @end
 
@@ -22,11 +26,13 @@
 
 {
     NSArray *imageArray;
+    NSArray *pathArray;
+    NSMutableArray *buttonArray;
     int pageNumber;
     NSTimer *timer;
     IBOutlet UIView *sideScroller;
-    //    DMSideScrollView *contentScrollView;
     IBOutlet UIScrollView *scrollView;
+    NSArray *imagepath;
     
     //BGMのため
     AVAudioPlayer *player;
@@ -36,112 +42,217 @@
     
 }
 
-//#pragma mark - Delegate
-//- (void)makeButtonsWithSize:(CGSize)size {
-//
-//    for (int i = 0; i < imageArray.count; i++) {
-//        UIImageView *iv = [[UIImageView alloc] initWithImage:imageArray[i]];
-//        iv.frame = CGRectMake(sideScroller.bounds.origin.x + 10 + (10 * i) + (size.width * i), 10, size.width, size.height);
-//        iv.contentMode = UIViewContentModeScaleAspectFill;
-//        //iv.backgroundColor = [UIColor redColor];
-//        iv.userInteractionEnabled = YES;
-//        iv.tag = i + 1;
-//        iv.clipsToBounds = YES;
-////        [imageArray addObject:iv];
-//        [contentScrollView addSubview:iv];
-//    }
-//
-//    contentScrollView.contentSize = CGSizeMake(sideScroller.bounds.origin.x + 10 + (10 * imageArray.count) + (size.width * imageArray.count), sideScroller.bounds.size.height);
-//    [sideScroller addSubview:contentScrollView];
-//}
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    scrollView.userInteractionEnabled = YES;
-    scrollView.scrollEnabled = YES;
-    
-    NSError *error = nil;
-    // 再生する audio ファイルのパスを取得
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
-    // パスから、再生するURLを作成する
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    // auido を再生するプレイヤーを作成する
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    // エラーが起きたとき
-    if ( error != nil )
-    {
-        NSLog(@"Error %@", [error localizedDescription]);
-    }
-    // 自分自身をデリゲートに設定
-    [self.audioPlayer setDelegate:self];
+    _playButton = scrollView;
+//    scrollView.userInteractionEnabled = YES;
+//    scrollView.scrollEnabled = YES;
+//    NSError *error = nil;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
+//    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//    
+//    if ( error != nil )
+//    {
+//        NSLog(@"Error %@", [error localizedDescription]);
+//    }
+//    [self->player prepareToPlay];
+//    [self->player setDelegate:self];
+//    NSTimeInterval ti = self->player.duration;
     
     imageArray = [NSArray arrayWithObjects:
-                  [UIImage imageNamed:@"design_1.png"],
-                  [UIImage imageNamed:@"design_2.png"],
-                  [UIImage imageNamed:@"design_3.png"],
-                  [UIImage imageNamed:@"design_4.png"],
-                  [UIImage imageNamed:@"design_5.png"],
-                  [UIImage imageNamed:@"design_6.png"],
-                  [UIImage imageNamed:@"design_7.png"],
-                  [UIImage imageNamed:@"design_8.png"],nil];
+                  [UIImage imageNamed:@"otodama_1.png"],
+                  [UIImage imageNamed:@"otodama_2.png"],
+                  [UIImage imageNamed:@"otodama_3.png"],
+                  [UIImage imageNamed:@"otodama_4.png"],
+                  [UIImage imageNamed:@"otodama_5.png"],
+                  [UIImage imageNamed:@"otodama_6.png"],
+                  [UIImage imageNamed:@"otodama_7.png"],
+                  [UIImage imageNamed:@"otodama_8.png"],nil];
+    
+    if (!buttonArray) {
+        buttonArray = [NSMutableArray new];
+    }
+    
     [self makeButtons:imageArray.count];
+   
 }
 
-//-(IBAction)playAudio:(id)sender
-//{
-//    if ( self.audioPlayer.playing ){
-//        [self.audioPlayer stop];
-//        [self.playButton setTitle:@"Stop" forState:UIControlStateNormal];
-//    }
-//    else{
-//        [self.audioPlayer play];
-//        [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
-//    }
-//}
+- (void)pushButton:(UIButton *)button {
+    NSLog(@"Button Tag == %ld", button.tag);
+    [self checkButton:button];
+    
+    
+    if (button.tag == 0) {
+        [self.audioPlayer stop];
+        _audioPlayer.currentTime = 0;
+    }
+    
+    if (button.tag == 1) {
+        
+//            NSError *error = nil;
+        path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
+//        url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];
+//            self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//            if ( error != nil )
+//            {
+//                NSLog(@"Error %@", [error localizedDescription]);
+//            }
+            [player prepareToPlay];
+            [player setDelegate:self];
+        if ( player.playing ){
+            [player stop];
+        }
+            else{
+                [self.audioPlayer play];
+            }
 
-//    if (!contentScrollView) {
-//        contentScrollView = [[DMSideScrollView alloc] initWithFrame:CGRectMake(0, 0, sideScroller.bounds.size.width, sideScroller.bounds.size.height)];
-//        contentScrollView.userInteractionEnabled = YES;
-//        contentScrollView.showsHorizontalScrollIndicator = NO;
-//        contentScrollView.pagingEnabled = NO;
-//        contentScrollView.bounces = YES;
-//    }
-//    contentScrollView.delegate = self;
-//
-//    if (!imageArray) {
-//        imageArray = [NSMutableArray new];
-//    }
-//
-//    traceMode = NO;
-//    tranceNumber = 45.0;
-//
-//    imageArray = [NSArray arrayWithObjects:
-//                  [UIImage imageNamed:@"design_1.png"],
-//                  [UIImage imageNamed:@"design_2.png"],
-//                  [UIImage imageNamed:@"design_3.png"],
-//                  [UIImage imageNamed:@"design_4.png"],
-//                  [UIImage imageNamed:@"design_5.png"],
-//                  [UIImage imageNamed:@"design_6.png"],
-//                  [UIImage imageNamed:@"design_7.png"],
-//                  [UIImage imageNamed:@"design_8.png"],nil];
-//
-//    [self makeButtonsWithSize:CGSizeMake(60, 60)];
-//
-//    self.view.userInteractionEnabled = YES;
-//    _imageView.userInteractionEnabled = YES;
-//    sideScroller.userInteractionEnabled = YES;
-//    contentScrollView.userInteractionEnabled = YES;
-//
-//    //[self setSKScene];
-//}
+    }
+    
+    
+    if (button.tag == 2) {
+//        NSError *error = nil;
+          path = [[NSBundle mainBundle] pathForResource:@"sampleM" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+//        [player prepareToPlay];
+//        [player setDelegate:self];
+        if (player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+    if (button.tag  == 3) {
+//        NSError *error = nil;
+        path = [[NSBundle mainBundle] pathForResource:@"sampleOk" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+//        [player prepareToPlay];
+//        [player setDelegate:self];
+        if (player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+    
+    if (button.tag == 4) {
+//        NSError *error = nil;
+          path = [[NSBundle mainBundle] pathForResource:@"sampleO1" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];
+//        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+//        [player prepareToPlay];
+//        [player setDelegate:self];
+        if (player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+    if (button.tag == 5) {
+//        NSError *error = nil;
+          path = [[NSBundle mainBundle] pathForResource:@"sampleO2" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];
+//        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+        [self->player prepareToPlay];
+        [self->player setDelegate:self];
+        if ( player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+    if (button.tag == 6) {
+//        NSError *error = nil;
+          path = [[NSBundle mainBundle] pathForResource:@"sampleP1" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+        [player prepareToPlay];
+        [player setDelegate:self];
+        if (player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+    if (button.tag == 7) {
+//        NSError *error = nil;
+          path = [[NSBundle mainBundle] pathForResource:@"sampleP2" ofType:@"mp3"];
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+//        [DMMovieMaker makeMovieWithImages:imageArray withAudio:url];
+//        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//        
+//        if ( error != nil )
+//        {
+//            NSLog(@"Error %@", [error localizedDescription]);
+//        }
+        [player prepareToPlay];
+        [player setDelegate:self];
+        if (player.playing ){
+            [player stop];
+        }
+        else{
+            [self.audioPlayer play];
+        }
+    }
+    
+}
 
-/* Gesture
- UISwipeGestureRecognizer* swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeftGesture:)];
- swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
- [self.imageView addGestureRecognizer:swipeLeftGesture];
- */
+- (void)checkButton: (UIButton *)currentButton {
+    
+    for (int i = 0; i < buttonArray.count; i++) {
+        if (currentButton == buttonArray[i]) {
+            [self.audioPlayer stop];
+            _audioPlayer.currentTime = 0;
+            [[buttonArray[i] layer] setBorderColor:[[UIColor orangeColor] CGColor]];
+            [[buttonArray[i] layer] setBorderWidth:2.0];
+        }else {
+            [_audioPlayer play];
+            [[buttonArray[i] layer] setBorderColor:[[UIColor blackColor] CGColor]];
+            [[buttonArray[i] layer] setBorderWidth:1.5];
+        }
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -152,9 +263,11 @@
 #pragma mark - Private
 - (void)paging {
     if (pageNumber < self.imageArray.count) {
+        NSLog(@"pageNumber=%d",pageNumber);
+
         self.imageView.image = [self.imageArray[pageNumber] valueForKey:@"UIImagePickerControllerOriginalImage"];
         pageNumber = pageNumber + 1;
-    }else {
+            }else {
         NSLog(@"end");
         [timer invalidate];
     }
@@ -169,61 +282,52 @@
 }
 
 - (IBAction)startAnimation:(id)sender {
-    timer = [NSTimer scheduledTimerWithTimeInterval:TIME target:self selector:@selector(paging) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:TIME target:self selector:@selector(paging)  userInfo:nil repeats:YES];
     [timer fire];
 }
 
-- (IBAction)saveMovie {
-    ASScreenRecorder *recorder = [ASScreenRecorder sharedInstance];
+- (IBAction)makeMovie {
+    url = [[NSURL alloc] initFileURLWithPath:path];
+    [DMMovieMaker makeMovieWithImages:self.photoimageArray withAudio:url];
+
     
-    if (recorder.isRecording) {
-        [recorder stopRecordingWithCompletion:^{
-            NSLog(@"Finished recording");
-        }];
-    } else {
-        [recorder startRecording];
-        NSLog(@"Start recording");
-    }
+//    ASScreenRecorder *recorder = [ASScreenRecorder sharedInstance];
+//    
+//    if (recorder.isRecording) {
+//        [recorder stopRecordingWithCompletion:^{
+//            NSLog(@"Finished recording");
+//        }];
+//    } else {
+//        [recorder startRecording];
+//        NSLog(@"Start recording");
+//    }
 }
 
 #pragma mark - Private
 - (void)makeButtons:(int)numberOfButtons {
     for (int i = 0; i < numberOfButtons; i++) {
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((BUTTON_WIDTH * i) + (20 * (i + 1)), 0, BUTTON_WIDTH, BUTTON_HEIGHT)];
+                UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((BUTTON_WIDTH * i + 1) +  (20 * (i + 1)) , 0, BUTTON_WIDTH, BUTTON_HEIGHT)];
 //        [button setTitle:@"Button" forState:UIControlStateNormal];
         [button setTitle:@"Tapped" forState:UIControlStateSelected];
         [button addTarget:self action:@selector(pushButton:) forControlEvents:UIControlEventTouchUpInside];
         [button setBackgroundImage:imageArray[i] forState:UIControlStateNormal];
         
-        button.tag = i;
         
+        button.tag = i;
+        button.layer.cornerRadius = 40.0f;
+        button.clipsToBounds = YES;
+        
+        [[button layer] setBorderColor:[[UIColor blackColor] CGColor]];
+        [[button layer] setBorderWidth:1.5];
+
         [scrollView addSubview:button];
+        [buttonArray addObject:button];
     }
-    scrollView.contentSize = CGSizeMake((BUTTON_WIDTH * numberOfButtons) + (10 * numberOfButtons), BUTTON_HEIGHT);
+    scrollView.contentSize = CGSizeMake((BUTTON_WIDTH * numberOfButtons) + (23 * numberOfButtons), BUTTON_HEIGHT);
 }
 
 
-- (void)pushButton:(UIButton *)button {
-    NSLog(@"Button Tag == %ld", button.tag);
-    if (button.tag == 0) {
-        path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"];
-        url = [[NSURL alloc] initFileURLWithPath:path];
-        self->player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-        // エラーが起きたとき
-        if ( error != nil )
-        {
-            NSLog(@"Error %@", [error localizedDescription]);
-        }
-        // 自分自身をデリゲートに設定
-        [self->player setDelegate:self];
-        if ( self->player.playing ){
-            [self->player stop];
-        }
-        else{
-            [self.audioPlayer play];
-        }
-    }
-}
+
 
 
 @end

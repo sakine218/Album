@@ -51,6 +51,7 @@
     self = [super init];
     if (self) {
 //TODO: ここでサイズ調整
+
         _viewSize = [UIApplication sharedApplication].delegate.window.bounds.size;
         _scale = [UIScreen mainScreen].scale;
         // record half size resolution for retina iPads
@@ -237,7 +238,6 @@
         }
         CFTimeInterval elapsed = (_displayLink.timestamp - self.firstTimeStamp);
         CMTime time = CMTimeMakeWithSeconds(elapsed, 1000);
-        
         CVPixelBufferRef pixelBuffer = NULL;
         CGContextRef bitmapContext = [self createPixelBufferAndBitmapContext:&pixelBuffer];
         
