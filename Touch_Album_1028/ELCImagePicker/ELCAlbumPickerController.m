@@ -29,6 +29,7 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 	
 	[self.navigationItem setTitle:NSLocalizedString(@"Loading...", nil)];
+    [UINavigationBar appearance].tintColor = [UIColor colorWithRed:255/255.0 green:250/255.0 blue:205/255.0 alpha:1.000];
 
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.parent action:@selector(cancelImagePicker)];
 	[self.navigationItem setRightBarButtonItem:cancelButton];
@@ -106,7 +107,7 @@
 - (void)reloadTableView
 {
 	[self.tableView reloadData];
-	[self.navigationItem setTitle:NSLocalizedString(@"Select an Album", nil)];
+	[self.navigationItem setTitle:NSLocalizedString(@"Select", nil)];
 }
 
 - (BOOL)shouldSelectAsset:(ELCAsset *)asset previousCount:(NSUInteger)previousCount

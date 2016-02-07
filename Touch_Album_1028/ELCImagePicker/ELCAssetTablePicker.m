@@ -10,6 +10,7 @@
 #import "ELCAsset.h"
 #import "ELCAlbumPickerController.h"
 #import "ELCConsole.h"
+#import "MBProgressHUD.h"
 
 @interface ELCAssetTablePicker ()
 
@@ -128,7 +129,9 @@
 - (void)doneAction:(id)sender
 {	
 	NSMutableArray *selectedAssetsImages = [[NSMutableArray alloc] init];
-	    
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
 	for (ELCAsset *elcAsset in self.elcAssets) {
 		if ([elcAsset selected]) {
 			[selectedAssetsImages addObject:elcAsset];

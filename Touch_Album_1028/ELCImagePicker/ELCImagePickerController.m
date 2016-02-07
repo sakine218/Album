@@ -14,6 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "ELCConsole.h"
+#import "MBProgressHUD.h"
 
 @implementation ELCImagePickerController
 
@@ -21,6 +22,7 @@
 
 - (id)initImagePicker
 {
+    
     ELCAlbumPickerController *albumPicker = [[ELCAlbumPickerController alloc] initWithStyle:UITableViewStylePlain];
     
     self = [super initWithRootViewController:albumPicker];
@@ -36,7 +38,7 @@
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController
 {
-
+    
     self = [super initWithRootViewController:rootViewController];
     if (self) {
         self.maximumImagesCount = 4;
@@ -62,9 +64,9 @@
 
 - (void)cancelImagePicker
 {
-	if ([_imagePickerDelegate respondsToSelector:@selector(elcImagePickerControllerDidCancel:)]) {
-		[_imagePickerDelegate performSelector:@selector(elcImagePickerControllerDidCancel:) withObject:self];
-	}
+    if ([_imagePickerDelegate respondsToSelector:@selector(elcImagePickerControllerDidCancel:)]) {
+        [_imagePickerDelegate performSelector:@selector(elcImagePickerControllerDidCancel:) withObject:self];
+    }
 }
 
 - (BOOL)shouldSelectAsset:(ELCAsset *)asset previousCount:(NSUInteger)previousCount
@@ -89,56 +91,62 @@
 
 - (void)selectedAssets:(NSArray *)assets
 {
-	NSMutableArray *returnArray = [[NSMutableArray alloc] init];
-	
-	for(ELCAsset *elcasset in assets) {
-        ALAsset *asset = elcasset.asset;
-		id obj = [asset valueForProperty:ALAssetPropertyType];
-		if (!obj) {
-			continue;
-		}
-		NSMutableDictionary *workingDictionary = [[NSMutableDictionary alloc] init];
-		
-		CLLocation* wgs84Location = [asset valueForProperty:ALAssetPropertyLocation];
-		if (wgs84Location) {
-			[workingDictionary setObject:wgs84Location forKey:ALAssetPropertyLocation];
-		}
-        
-        [workingDictionary setObject:obj forKey:UIImagePickerControllerMediaType];
-
-        //This method returns nil for assets from a shared photo stream that are not yet available locally. If the asset becomes available in the future, an ALAssetsLibraryChangedNotification notification is posted.
-        ALAssetRepresentation *assetRep = [asset defaultRepresentation];
-
-        if(assetRep != nil) {
-            if (_returnsImage) {
-                CGImageRef imgRef = nil;
-                //defaultRepresentation returns image as it appears in photo picker, rotated and sized,
-                //so use UIImageOrientationUp when creating our image below.
-                UIImageOrientation orientation = UIImageOrientationUp;
-            
-                if (_returnsOriginalImage) {
-                    imgRef = [assetRep fullResolutionImage];
-                    orientation = [assetRep orientation];
-                } else {
-                    imgRef = [assetRep fullScreenImage];
-                }
-                UIImage *img = [UIImage imageWithCGImage:imgRef
-                                                   scale:1.0f
-                                             orientation:orientation];
-                [workingDictionary setObject:img forKey:UIImagePickerControllerOriginalImage];
+    // [MBProgressHUD showHUDAddedTo:self.navigationBar animated:YES];
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // バックグランドでAPIなどを実行
+        for(ELCAsset *elcasset in assets) {
+            ALAsset *asset = elcasset.asset;
+            id obj = [asset valueForProperty:ALAssetPropertyType];
+            if (!obj) {
+                continue;
             }
-
-            [workingDictionary setObject:[[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]] forKey:UIImagePickerControllerReferenceURL];
+            NSMutableDictionary *workingDictionary = [[NSMutableDictionary alloc] init];
             
-            [returnArray addObject:workingDictionary];
+            CLLocation* wgs84Location = [asset valueForProperty:ALAssetPropertyLocation];
+            if (wgs84Location) {
+                [workingDictionary setObject:wgs84Location forKey:ALAssetPropertyLocation];
+            }
+            
+            [workingDictionary setObject:obj forKey:UIImagePickerControllerMediaType];
+            
+            //This method returns nil for assets from a shared photo stream that are not yet available locally. If the asset becomes available in the future, an ALAssetsLibraryChangedNotification notification is posted.
+            ALAssetRepresentation *assetRep = [asset defaultRepresentation];
+            
+            if(assetRep != nil) {
+                if (_returnsImage) {
+                    CGImageRef imgRef = nil;
+                    //defaultRepresentation returns image as it appears in photo picker, rotated and sized,
+                    //so use UIImageOrientationUp when creating our image below.
+                    UIImageOrientation orientation = UIImageOrientationUp;
+                    
+                    if (_returnsOriginalImage) {
+                        imgRef = [assetRep fullResolutionImage];
+                        orientation = [assetRep orientation];
+                    } else {
+                        imgRef = [assetRep fullScreenImage];
+                    }
+                    UIImage *img = [UIImage imageWithCGImage:imgRef
+                                                       scale:1.0f
+                                                 orientation:orientation];
+                    [workingDictionary setObject:img forKey:UIImagePickerControllerOriginalImage];
+                }
+                
+                [workingDictionary setObject:[[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]] forKey:UIImagePickerControllerReferenceURL];
+                
+                [returnArray addObject:workingDictionary];
+            }
+            
         }
-		
-	}    
-	if (_imagePickerDelegate != nil && [_imagePickerDelegate respondsToSelector:@selector(elcImagePickerController:didFinishPickingMediaWithInfo:)]) {
-		[_imagePickerDelegate performSelector:@selector(elcImagePickerController:didFinishPickingMediaWithInfo:) withObject:self withObject:returnArray];
-	} else {
-        [self popToRootViewControllerAnimated:NO];
-    }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // メインスレッドで処理をしたい内容、UIを変更など。
+            if (_imagePickerDelegate != nil && [_imagePickerDelegate respondsToSelector:@selector(elcImagePickerController:didFinishPickingMediaWithInfo:)]) {
+                [_imagePickerDelegate performSelector:@selector(elcImagePickerController:didFinishPickingMediaWithInfo:) withObject:self withObject:returnArray];
+            } else {
+                [self popToRootViewControllerAnimated:NO];
+            }
+        });
+    });
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation

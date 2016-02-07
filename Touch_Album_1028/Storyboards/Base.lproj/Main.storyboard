@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VxG-1y-J1S">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjv-yZ-GLt"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ln-EC-by0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hyoushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-Ij-t5T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="bottom" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oVL-De-slI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <size key="titleShadowOffset" width="3" height="1"/>
+                                <state key="normal">
+                                    <string key="title">
+
+
+
+
+
+
+
+
+Touch the screen</string>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1569113756613757" green="0.1569113756613757" blue="0.1569113756613757" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ADg-CM-U24" kind="push" id="Aof-tD-AMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ix-2O-pgY"/>
+                    <connections>
+                        <outlet property="startButton" destination="oVL-De-slI" id="xTX-d4-EFn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="294"/>
+        </scene>
+        <!--Add Post View Controller-->
+        <scene sceneID="Mj3-Vj-PfE">
+            <objects>
+                <viewController id="ADg-CM-U24" customClass="AddPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EbG-tU-m9b"/>
+                        <viewControllerLayoutGuide type="bottom" id="rMq-vI-H9u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Av-NY-zw9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLb-vS-9Dp">
+                                <rect key="frame" x="54" y="247" width="221" height="68"/>
+                                <state key="normal" image="shinki.png">
+                                    <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showELCPicker:" destination="ADg-CM-U24" eventType="touchUpInside" id="kUf-Ej-I0d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bB-l7-Vpl">
+                                <rect key="frame" x="-38" y="352" width="404" height="80"/>
+                                <state key="normal" image="seen.png">
+                                    <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lKZ-Bm-xUK" kind="push" id="Dmj-sW-yc9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="op.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIk-iV-c5v">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="odS-GL-4Vp"/>
+                    <connections>
+                        <segue destination="Bbu-rx-YX0" kind="push" identifier="toNext" id="MQx-2e-mBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCv-9D-AFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GMc-NF-rxj">
+            <objects>
+                <viewController id="lKZ-Bm-xUK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sjE-0n-i94"/>
+                        <viewControllerLayoutGuide type="bottom" id="R4z-ZS-9l8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zsi-Xf-UJV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HyN-7O-Wlr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjO-hm-EsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="965"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I37-Ni-u7w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VxG-1y-J1S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C34-2m-QAp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="NFk-PI-4qT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="db9-gS-jHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="296"/>
+        </scene>
+        <!--Check View Controller-->
+        <scene sceneID="5yv-Wc-EFK">
+            <objects>
+                <viewController id="Bbu-rx-YX0" customClass="CheckViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KYQ-uH-K2j"/>
+                        <viewControllerLayoutGuide type="bottom" id="TOa-mE-QVG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Aq-Ft-FcT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="making.png" translatesAutoresizingMaskIntoConstraints="NO" id="rcg-KC-lMx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-1W-3ZB">
+                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="gkx-GD-X1i">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="59w-gD-foT"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-4x-5Ph">
+                                <rect key="frame" x="0.0" y="478" width="320" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="9q1-Bb-0E0"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-yJ-Uwn">
+                                <rect key="frame" x="20" y="160" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="2Tr-qM-SKX"/>
+                                    <constraint firstAttribute="width" constant="280" id="oEa-2v-X6B"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gJy-yJ-Uwn" firstAttribute="top" secondItem="KYQ-uH-K2j" secondAttribute="bottom" constant="96" id="81L-RN-FBV"/>
+                            <constraint firstItem="Zee-4x-5Ph" firstAttribute="top" secondItem="gJy-yJ-Uwn" secondAttribute="bottom" constant="38" id="VPM-VW-MmM"/>
+                            <constraint firstItem="Zee-4x-5Ph" firstAttribute="leading" secondItem="6Aq-Ft-FcT" secondAttribute="leading" id="VrE-Gx-sJx"/>
+                            <constraint firstItem="TOa-mE-QVG" firstAttribute="top" secondItem="Zee-4x-5Ph" secondAttribute="bottom" id="ZGT-hu-M20"/>
+                            <constraint firstItem="gJy-yJ-Uwn" firstAttribute="leading" secondItem="6Aq-Ft-FcT" secondAttribute="leading" constant="20" id="h03-ie-MUk"/>
+                            <constraint firstAttribute="trailing" secondItem="Zee-4x-5Ph" secondAttribute="trailing" id="w4a-cu-RhE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eBB-6d-RNn">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="cCP-rV-f1E">
+                            <connections>
+                                <action selector="okButton:" destination="Bbu-rx-YX0" id="WiR-C3-U3G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonscrollView" destination="Zee-4x-5Ph" id="jeg-iX-0iy"/>
+                        <outlet property="scrollView" destination="gJy-yJ-Uwn" id="cie-X9-bUL"/>
+                        <segue destination="n0q-5Y-dmy" kind="push" identifier="toPreview" id="7mh-4s-6e8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pY-Ok-k1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="294"/>
+        </scene>
+        <!--sharemovieViewController-->
+        <scene sceneID="vYZ-GL-CgQ">
+            <objects>
+                <viewController title="sharemovieViewController" id="n0q-5Y-dmy" customClass="ShareMovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dMc-fh-xTQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="g9I-1J-h96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q9d-xe-KyV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="wni-ww-hkw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfJ-pY-lu9">
+                                <rect key="frame" x="20" y="427" width="65" height="65"/>
+                                <state key="normal" image="shareicon.png"/>
+                                <connections>
+                                    <action selector="BtnPush:" destination="n0q-5Y-dmy" eventType="touchUpInside" id="T4M-sc-8Xg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-g8-4r7">
+                                <rect key="frame" x="92" y="427" width="65" height="65"/>
+                                <state key="normal" image="shareicon2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0K-fH-fV0">
+                                <rect key="frame" x="235" y="427" width="65" height="65"/>
+                                <state key="normal" image="shareicon4.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX5-Ws-8ck">
+                                <rect key="frame" x="164" y="427" width="65" height="65"/>
+                                <state key="normal" image="shareicon3.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hBX-C3-R2J">
+                        <barButtonItem key="rightBarButtonItem" title="home" id="egI-nM-P9K">
+                            <connections>
+                                <segue destination="ADg-CM-U24" kind="push" id="ore-Wh-pw5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="facebookButtton" destination="LX5-Ws-8ck" id="9AQ-76-FNf"/>
+                        <outlet property="twitterButton" destination="YGI-g8-4r7" id="clb-m9-nP2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5b-xn-2NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hyoushi.png" width="750" height="1334"/>
+        <image name="making.png" width="750" height="1334"/>
+        <image name="op.png" width="750" height="1334"/>
+        <image name="seen.png" width="260" height="80"/>
+        <image name="share.png" width="750" height="1334"/>
+        <image name="shareicon.png" width="300" height="300"/>
+        <image name="shareicon2.png" width="300" height="300"/>
+        <image name="shareicon3.png" width="300" height="300"/>
+        <image name="shareicon4.png" width="300" height="300"/>
+        <image name="shinki.png" width="260" height="80"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Aof-tD-AMQ"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.99607843137254903" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+</document>

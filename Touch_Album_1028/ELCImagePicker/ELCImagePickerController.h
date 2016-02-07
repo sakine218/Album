@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ELCAssetSelectionDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 @class ELCImagePickerController;
 @class ELCAlbumPickerController;

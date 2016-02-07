@@ -10,6 +10,8 @@
 #import "ELCAsset.h"
 #import "ELCAssetSelectionDelegate.h"
 #import "ELCAssetPickerFilterDelegate.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ELCAssetTablePicker : UITableViewController <ELCAssetDelegate>
 
