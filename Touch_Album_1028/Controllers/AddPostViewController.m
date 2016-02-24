@@ -11,6 +11,7 @@
 #import "ELCAlbumPickerController.h"
 #import "MBProgressHUD.h"
 #import "ELCOverlayImageView.h"
+
 @interface AddPostViewController() <UIImagePickerControllerDelegate, UINavigationControllerDelegate, ELCImagePickerControllerDelegate>
 @property(nonatomic, strong) ELCImagePickerController *elcPicker;
 @end
@@ -23,7 +24,7 @@
 {
     // Create the image picker
     self.elcPicker = [[ELCImagePickerController alloc] initImagePicker];
-    self.elcPicker.maximumImagesCount = 100; //Set the maximum number of images to select, defaults to 4
+    self.elcPicker.maximumImagesCount = 50; //Set the maximum number of images to select, defaults to 4
     self.elcPicker.returnsOriginalImage = NO; //Only return the fullScreenImage, not the fullResolutionImage
     self.elcPicker.returnsImage = YES; //Return UIimage if YES. If NO, only return asset location information
     self.elcPicker.onOrder = YES; //For multiple image selection, display and return selected order of images
@@ -35,12 +36,12 @@
 }
 
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info{
-    if (info.count < 5) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"画像選択について" message:@"5枚以上選択してください"
-                                  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        return;
-    }
+//    if (info.count < 5) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"5枚以上選択してください"
+//                                  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alert show];
+//        return;
+//    }
 //    [self.view bringSubviewToFront:ELCOverlayImageView];
     
     // リサイズ
@@ -60,7 +61,10 @@
     [ud synchronize];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];

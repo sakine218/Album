@@ -1,0 +1,24 @@
+PODS:
+  - EAIntroView (2.8.1):
+    - EARestrictedScrollView (~> 0.2.0)
+  - EARestrictedScrollView (0.2.0)
+  - Realm (0.98.0):
+    - Realm/Headers (= 0.98.0)
+  - Realm/Headers (0.98.0)
+  - REComposeViewController (2.3.2)
+  - SVProgressHUD (2.0-beta8)
+
+DEPENDENCIES:
+  - EAIntroView (~> 2.8.0)
+  - Realm (~> 0.98.0)
+  - REComposeViewController (~> 2.3.2)
+  - SVProgressHUD (~> 2.0-beta8)
+
+SPEC CHECKSUMS:
+  EAIntroView: 73abfa89caa311f450af876421d950b96679e845
+  EARestrictedScrollView: f86d61e16c61d3e93c84f8e96e83122a2a3b7631
+  Realm: 28efc598b8b1b378d27a222d9fc037a29ae68642
+  REComposeViewController: b3b95517095c11dae4045fed44377096c9fa0981
+  SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
+
+COCOAPODS: 0.39.0

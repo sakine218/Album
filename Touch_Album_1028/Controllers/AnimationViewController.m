@@ -313,8 +313,4 @@
     scrollView.contentSize = CGSizeMake((BUTTON_WIDTH * numberOfButtons) + (23 * numberOfButtons), BUTTON_HEIGHT);
 }
 
-
-
-
-
 @end

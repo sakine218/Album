@@ -19,21 +19,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hyoushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-Ij-t5T">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="bottom" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oVL-De-slI">
+                            <button opaque="NO" contentMode="bottom" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oVL-De-slI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="3" height="1"/>
-                                <state key="normal">
-                                    <string key="title">
-
-
-
-
-
-
-
-
-Touch the screen</string>
+                                <state key="normal" image="start.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.1569113756613757" green="0.1569113756613757" blue="0.1569113756613757" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -51,7 +40,7 @@ Touch the screen</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="294"/>
+            <point key="canvasLocation" x="13" y="294"/>
         </scene>
         <!--Add Post View Controller-->
         <scene sceneID="Mj3-Vj-PfE">
@@ -65,9 +54,12 @@ Touch the screen</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="DB2-uh-7ou">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLb-vS-9Dp">
-                                <rect key="frame" x="54" y="247" width="221" height="68"/>
-                                <state key="normal" image="shinki.png">
+                                <rect key="frame" x="7" y="162" width="300" height="80"/>
+                                <state key="normal" image="newbutton.png">
                                     <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -76,8 +68,8 @@ Touch the screen</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bB-l7-Vpl">
-                                <rect key="frame" x="-38" y="352" width="404" height="80"/>
-                                <state key="normal" image="seen.png">
+                                <rect key="frame" x="21" y="269" width="292" height="80"/>
+                                <state key="normal" image="albumbutton.png">
                                     <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -85,25 +77,22 @@ Touch the screen</string>
                                     <segue destination="lKZ-Bm-xUK" kind="push" id="Dmj-sW-yc9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="op.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIk-iV-c5v">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="odS-GL-4Vp"/>
                     <connections>
-                        <segue destination="Bbu-rx-YX0" kind="push" identifier="toNext" id="MQx-2e-mBd"/>
+                        <segue destination="Wbg-2g-YNg" kind="modal" identifier="toNext" id="MQx-2e-mBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCv-9D-AFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="403" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--Album View Controller-->
         <scene sceneID="GMc-NF-rxj">
             <objects>
-                <viewController id="lKZ-Bm-xUK" sceneMemberID="viewController">
+                <viewController id="lKZ-Bm-xUK" customClass="AlbumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sjE-0n-i94"/>
                         <viewControllerLayoutGuide type="bottom" id="R4z-ZS-9l8"/>
@@ -111,13 +100,18 @@ Touch the screen</string>
                     <view key="view" contentMode="scaleToFill" id="zsi-Xf-UJV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="albumscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWd-cJ-sQ7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HyN-7O-Wlr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjO-hm-EsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="965"/>
+            <point key="canvasLocation" x="403" y="958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I37-Ni-u7w">
@@ -202,7 +196,7 @@ Touch the screen</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pY-Ok-k1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="294"/>
+            <point key="canvasLocation" x="1200" y="296"/>
         </scene>
         <!--sharemovieViewController-->
         <scene sceneID="vYZ-GL-CgQ">
@@ -220,58 +214,69 @@ Touch the screen</string>
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfJ-pY-lu9">
-                                <rect key="frame" x="20" y="427" width="65" height="65"/>
+                                <rect key="frame" x="44" y="427" width="65" height="65"/>
                                 <state key="normal" image="shareicon.png"/>
                                 <connections>
                                     <action selector="BtnPush:" destination="n0q-5Y-dmy" eventType="touchUpInside" id="T4M-sc-8Xg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-g8-4r7">
-                                <rect key="frame" x="92" y="427" width="65" height="65"/>
-                                <state key="normal" image="shareicon2.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0K-fH-fV0">
-                                <rect key="frame" x="235" y="427" width="65" height="65"/>
-                                <state key="normal" image="shareicon4.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX5-Ws-8ck">
-                                <rect key="frame" x="164" y="427" width="65" height="65"/>
+                                <rect key="frame" x="213" y="427" width="65" height="65"/>
                                 <state key="normal" image="shareicon3.png"/>
+                                <connections>
+                                    <action selector="facebookButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="okk-6N-A0P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-g8-4r7">
+                                <rect key="frame" x="128" y="427" width="65" height="65"/>
+                                <state key="normal" image="shareicon2.png"/>
+                                <connections>
+                                    <action selector="twitterButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="QY7-h4-Z17"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hBX-C3-R2J">
-                        <barButtonItem key="rightBarButtonItem" title="home" id="egI-nM-P9K">
-                            <connections>
-                                <segue destination="ADg-CM-U24" kind="push" id="ore-Wh-pw5"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="egI-nM-P9K"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="facebookButtton" destination="LX5-Ws-8ck" id="9AQ-76-FNf"/>
-                        <outlet property="twitterButton" destination="YGI-g8-4r7" id="clb-m9-nP2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5b-xn-2NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="296"/>
+            <point key="canvasLocation" x="1595" y="296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yJc-ok-oDz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wbg-2g-YNg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="j47-6Q-3q0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oWY-iB-HNR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bbu-rx-YX0" kind="relationship" relationship="rootViewController" id="ufU-vr-f2D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a39-hd-KfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="296"/>
         </scene>
     </scenes>
     <resources>
+        <image name="albumbutton.png" width="260" height="80"/>
+        <image name="albumscreen.png" width="750" height="1334"/>
         <image name="hyoushi.png" width="750" height="1334"/>
         <image name="making.png" width="750" height="1334"/>
-        <image name="op.png" width="750" height="1334"/>
-        <image name="seen.png" width="260" height="80"/>
+        <image name="menuscreen.png" width="750" height="1334"/>
+        <image name="newbutton.png" width="260" height="80"/>
         <image name="share.png" width="750" height="1334"/>
         <image name="shareicon.png" width="300" height="300"/>
         <image name="shareicon2.png" width="300" height="300"/>
         <image name="shareicon3.png" width="300" height="300"/>
-        <image name="shareicon4.png" width="300" height="300"/>
-        <image name="shinki.png" width="260" height="80"/>
+        <image name="start.png" width="320" height="568"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Aof-tD-AMQ"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.99607843137254903" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
 </document>
