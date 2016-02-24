@@ -106,7 +106,15 @@ const int kVideoFPS = 24;
     int32_t fps = 24;
     
     for (__weak UIImage *image in images) {
-        if (adaptor.assetWriterInput.readyForMoreMediaData) {
+        
+        while (adaptor.assetWriterInput.readyForMoreMediaData == NO) {
+            NSDate *waitingTime = [NSDate dateWithTimeIntervalSinceNow:0.1];
+            [[NSRunLoop currentRunLoop] runUntilDate:waitingTime];
+        }
+        
+        if (adaptor.assetWriterInput.readyForMoreMediaData == NO) {
+            NSLog(@"なんかうまくいきません、ごめんなさい");
+        }else {
             CMTime frameTime = CMTimeMake((int64_t)frameCount * fps * durationForEachImage, fps);
             // TODO: ここの調整(リサイズ後なのかそのままでいいのか)
             // UIImage *resizedImage = [self cropRectImage:image];
@@ -121,11 +129,6 @@ const int kVideoFPS = 24;
             }
             frameCount++;
             // images = nil;
-        }else {
-            // 追加(ここで10枚が7枚になるので
-            NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.4
-                               ];
-            [[NSRunLoop currentRunLoop] runUntilDate:maxDate];
         }
     }
     
