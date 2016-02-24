@@ -233,6 +233,10 @@
     }];
 }
 
+- (IBAction)backToTop {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 
