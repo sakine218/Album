@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VxG-1y-J1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VxG-1y-J1S">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -238,8 +238,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hBX-C3-R2J">
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="egI-nM-P9K"/>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="egI-nM-P9K">
+                            <connections>
+                                <action selector="backToTop" destination="n0q-5Y-dmy" id="gJA-qK-VT1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="facebookButtton" destination="LX5-Ws-8ck" id="Ulz-Ol-mey"/>
+                        <outlet property="twitterButton" destination="YGI-g8-4r7" id="C7b-AM-dus"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5b-xn-2NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
