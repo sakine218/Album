@@ -19,10 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //if ([[NSUserDefaults standardUserDefaults] integerForKey:@"active"] == 0) {
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"active"] == 0) {
         // もし初回起動ならばチュートリアル表示のメソッドを呼び出す
         [self showTutorial];
-    //}
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -88,7 +88,7 @@
     [intro showInView:self.view animateDuration:0.0];
         
     // チュートリアルを見たことを記録する
-    // [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"active"];
+    [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"active"];
 }
  
 @end

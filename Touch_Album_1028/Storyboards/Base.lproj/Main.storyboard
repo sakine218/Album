@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VxG-1y-J1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" red="0.1569113756613757" green="0.1569113756613757" blue="0.1569113756613757" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ADg-CM-U24" kind="push" id="Aof-tD-AMQ"/>
+                                    <segue destination="ADg-CM-U24" kind="modal" id="Aof-tD-AMQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,17 +64,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showELCPicker:" destination="ADg-CM-U24" eventType="touchUpInside" id="kUf-Ej-I0d"/>
+                                    <action selector="showELCPicker:" destination="ADg-CM-U24" eventType="touchUpInside" id="akP-M1-YOS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bB-l7-Vpl">
                                 <rect key="frame" x="21" y="269" width="292" height="80"/>
-                                <state key="normal" image="albumbutton.png">
+                                <state key="normal" image="guide.png">
                                     <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lKZ-Bm-xUK" kind="push" id="Dmj-sW-yc9"/>
+                                    <action selector="guideButton" destination="ADg-CM-U24" eventType="touchUpInside" id="QqP-k5-NVK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,54 +82,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="odS-GL-4Vp"/>
                     <connections>
+                        <outlet property="guideButton" destination="7bB-l7-Vpl" id="bYk-lj-8N2"/>
                         <segue destination="Wbg-2g-YNg" kind="modal" identifier="toNext" id="MQx-2e-mBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCv-9D-AFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="403" y="295"/>
-        </scene>
-        <!--Album View Controller-->
-        <scene sceneID="GMc-NF-rxj">
-            <objects>
-                <viewController id="lKZ-Bm-xUK" customClass="AlbumViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sjE-0n-i94"/>
-                        <viewControllerLayoutGuide type="bottom" id="R4z-ZS-9l8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zsi-Xf-UJV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="albumscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWd-cJ-sQ7">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HyN-7O-Wlr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pjO-hm-EsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="403" y="958"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="I37-Ni-u7w">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VxG-1y-J1S" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C34-2m-QAp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="NFk-PI-4qT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="db9-gS-jHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-399" y="296"/>
         </scene>
         <!--Check View Controller-->
         <scene sceneID="5yv-Wc-EFK">
@@ -180,6 +139,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eBB-6d-RNn">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="yPJ-hZ-aPd">
+                            <connections>
+                                <action selector="backToTop" destination="Bbu-rx-YX0" id="5fu-pT-rCO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="OK" id="cCP-rV-f1E">
                             <connections>
                                 <action selector="okButton:" destination="Bbu-rx-YX0" id="WiR-C3-U3G"/>
@@ -274,8 +238,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="albumbutton.png" width="260" height="80"/>
-        <image name="albumscreen.png" width="750" height="1334"/>
+        <image name="guide.png" width="260" height="80"/>
         <image name="hyoushi.png" width="750" height="1334"/>
         <image name="making.png" width="750" height="1334"/>
         <image name="menuscreen.png" width="750" height="1334"/>

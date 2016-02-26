@@ -22,7 +22,6 @@
 		812DD3B81C74B49A00EA9EB9 /* Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B31C74B49A00EA9EB9 /* Tutorial4.png */; };
 		812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B91C7720F000EA9EB9 /* Tutorial5.png */; };
 		812DD3C01C774BEF00EA9EB9 /* newbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3BF1C774BEF00EA9EB9 /* newbutton.png */; };
-		812DD3C21C774BFB00EA9EB9 /* albumbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3C11C774BFB00EA9EB9 /* albumbutton.png */; };
 		813181E11C6183610066D5E0 /* shareicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DD1C6183610066D5E0 /* shareicon2.png */; };
 		813181E21C6183610066D5E0 /* shareicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DE1C6183610066D5E0 /* shareicon3.png */; };
 		813181E31C6183610066D5E0 /* shareicon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DF1C6183610066D5E0 /* shareicon4.png */; };
@@ -94,6 +93,7 @@
 		81DD11D11C7DC29700BA8106 /* sampleP2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11CC1C7DC29700BA8106 /* sampleP2.mp3 */; };
 		81DD11D31C7DC29F00BA8106 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11D21C7DC29F00BA8106 /* start.png */; };
 		81DD11D61C7DC2EA00BA8106 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */; };
+		81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11D71C7DCC0C00BA8106 /* guide.png */; };
 		81E40B481C46578B00804108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E40B471C46578B00804108 /* main.m */; };
 		A8F4367C22EE5F0D060DE6E9 /* libPods-Touch_Album_1028.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */; };
 /* End PBXBuildFile section */
@@ -127,7 +127,6 @@
 		812DD3B31C74B49A00EA9EB9 /* Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4.png; sourceTree = "<group>"; };
 		812DD3B91C7720F000EA9EB9 /* Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial5.png; sourceTree = "<group>"; };
 		812DD3BF1C774BEF00EA9EB9 /* newbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbutton.png; sourceTree = "<group>"; };
-		812DD3C11C774BFB00EA9EB9 /* albumbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albumbutton.png; sourceTree = "<group>"; };
 		813181DD1C6183610066D5E0 /* shareicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon2.png; sourceTree = "<group>"; };
 		813181DE1C6183610066D5E0 /* shareicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon3.png; sourceTree = "<group>"; };
 		813181DF1C6183610066D5E0 /* shareicon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon4.png; sourceTree = "<group>"; };
@@ -231,6 +230,7 @@
 		81DD11D21C7DC29F00BA8106 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		81DD11D41C7DC2EA00BA8106 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		81DD11D71C7DCC0C00BA8106 /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
 		81E40B471C46578B00804108 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Touch_Album_1028.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C418EF732EB9C7524722E337 /* Pods-Touch_Album_1028.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Touch_Album_1028.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Touch_Album_1028/Pods-Touch_Album_1028.debug.xcconfig"; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 				8167F6CF1C66EBA900264BD0 /* seen.png */,
 				8167F6781C61962800264BD0 /* transition.png */,
 				812DD3BF1C774BEF00EA9EB9 /* newbutton.png */,
-				812DD3C11C774BFB00EA9EB9 /* albumbutton.png */,
+				81DD11D71C7DCC0C00BA8106 /* guide.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -626,6 +626,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */,
 				8197911D1BE0DD6A00CEDE61 /* Overlay.png in Resources */,
 				81DD11C11C7DC1FF00BA8106 /* onpu1.png in Resources */,
 				8167F6B51C66E2C300264BD0 /* onpuframe0.png in Resources */,
@@ -660,7 +661,6 @@
 				8167F6C91C66E3ED00264BD0 /* onpuframe6.png in Resources */,
 				812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */,
 				81DD11C41C7DC1FF00BA8106 /* onpu4.png in Resources */,
-				812DD3C21C774BFB00EA9EB9 /* albumbutton.png in Resources */,
 				81DD11C61C7DC1FF00BA8106 /* onpu6.png in Resources */,
 				813181E21C6183610066D5E0 /* shareicon3.png in Resources */,
 				8167F6801C61ADBC00264BD0 /* Main.storyboard in Resources */,
@@ -825,7 +825,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -847,6 +848,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -868,7 +870,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -883,6 +886,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -893,9 +897,12 @@
 			baseConfigurationReference = C418EF732EB9C7524722E337 /* Pods-Touch_Album_1028.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
 				INFOPLIST_FILE = "Touch_Album_1028/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 			};
 			name = Debug;
 		};
@@ -904,9 +911,12 @@
 			baseConfigurationReference = 75BC08378A40CE022F615FFA /* Pods-Touch_Album_1028.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
 				INFOPLIST_FILE = "Touch_Album_1028/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 			};
 			name = Release;
 		};
@@ -925,6 +935,7 @@
 				INFOPLIST_FILE = "Touch_Album_1028Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Touch_Album_1028.app/Touch_Album_1028";
 			};
 			name = Debug;
@@ -940,6 +951,7 @@
 				INFOPLIST_FILE = "Touch_Album_1028Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Touch_Album_1028.app/Touch_Album_1028";
 			};
 			name = Release;

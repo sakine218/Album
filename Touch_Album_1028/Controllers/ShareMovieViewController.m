@@ -109,7 +109,7 @@
     ACAccountType *type = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
     
     NSDictionary *options = @{ ACFacebookAppIdKey : @"1718574951696653",
-                               ACFacebookAudienceKey : ACFacebookAudienceOnlyMe,
+                               ACFacebookAudienceKey : ACFacebookAudienceFriends,
                                ACFacebookPermissionsKey : @[@"publish_actions"] };
     
     [store requestAccessToAccountsWithType:type options:options completion:^(BOOL granted, NSError *error) {

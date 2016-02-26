@@ -344,5 +344,10 @@ const CGFloat pWidth  = 280;
     }
     buttonscrollView.contentSize = CGSizeMake((BUTTON_WIDTH * numberOfButtons) + (23 * numberOfButtons), BUTTON_HEIGHT);
 }
+
+- (IBAction)backToTop {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
 
