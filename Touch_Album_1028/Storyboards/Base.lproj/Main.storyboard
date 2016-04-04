@@ -188,14 +188,14 @@
                                 <rect key="frame" x="213" y="427" width="65" height="65"/>
                                 <state key="normal" image="shareicon3.png"/>
                                 <connections>
-                                    <action selector="facebookButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="okk-6N-A0P"/>
+                                    <action selector="facebookButton:" destination="n0q-5Y-dmy" eventType="touchUpInside" id="0EK-Kb-i7f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-g8-4r7">
                                 <rect key="frame" x="128" y="427" width="65" height="65"/>
                                 <state key="normal" image="shareicon2.png"/>
                                 <connections>
-                                    <action selector="twitterButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="QY7-h4-Z17"/>
+                                    <action selector="twitterButton:" destination="n0q-5Y-dmy" eventType="touchUpInside" id="60Z-61-PxG"/>
                                 </connections>
                             </button>
                         </subviews>

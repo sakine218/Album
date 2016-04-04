@@ -595,6 +595,7 @@
 				TargetAttributes = {
 					819790AD1BE0DCAB00CEDE61 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = W2T75EV2YE;
 					};
 					819790C91BE0DCAC00CEDE61 = {
 						CreatedOnToolsVersion = 6.4;
@@ -897,12 +898,13 @@
 			baseConfigurationReference = C418EF732EB9C7524722E337 /* Pods-Touch_Album_1028.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Touch_Album_1028/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
+				PROVISIONING_PROFILE = "1def5b63-14cd-4405-91ac-2310126efd8c";
 			};
 			name = Debug;
 		};
@@ -911,12 +913,13 @@
 			baseConfigurationReference = 75BC08378A40CE022F615FFA /* Pods-Touch_Album_1028.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sakine Nishibayashi (W2T75EV2YE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Touch_Album_1028/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dee602fc-2835-42af-a1e7-7d3ebb0ae520";
+				PROVISIONING_PROFILE = "1def5b63-14cd-4405-91ac-2310126efd8c";
 			};
 			name = Release;
 		};

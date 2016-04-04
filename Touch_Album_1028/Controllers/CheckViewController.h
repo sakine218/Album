@@ -12,6 +12,8 @@
 
 @interface CheckViewController : UIViewController<AVAudioPlayerDelegate>
 @property(nonatomic) AVAudioPlayer *audioPlayer;
+@property UIView * barView;
+- (void)setBar;
 
 -(IBAction)okButton:(UIBarButtonItem *)savemovieButton;
 @end

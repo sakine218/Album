@@ -98,140 +98,200 @@
     }
 }
 
-- (IBAction)facebookButton {
-    
-//    SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-//    [vc setInitialText:NSLocalizedString(@"FacebookShareText", nil)];
-//    [vc addURL:self.outputURL];
-//    [self presentViewController:vc animated:YES completion:nil];
-    
-    ACAccountStore *store = [ACAccountStore new];
-    ACAccountType *type = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
-    
-    NSDictionary *options = @{ ACFacebookAppIdKey : @"1718574951696653",
-                               ACFacebookAudienceKey : ACFacebookAudienceFriends,
-                               ACFacebookPermissionsKey : @[@"publish_actions"] };
-    
-    [store requestAccessToAccountsWithType:type options:options completion:^(BOOL granted, NSError *error) {
-        if (! granted) {
-            NSLog(@"%@", error);
-            return;
-        }
-        
-        NSArray *accounts = [store accountsWithAccountType:type];
-        if (accounts.count < 1) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"エラー" message:@"Facebookのアカウントが設定されていません" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-            return;
-        }
-        
-        account = accounts[0];
-        ACAccountCredential *credientital = [account credential];
-        NSString *accessToken = [credientital oauthToken];
-        NSLog(@"信頼情報 == %@/ アクセストークン == %@", credientital, accessToken);
-        
-        // ここはメインスレッドで動かす
-        dispatch_async(dispatch_get_main_queue(), ^{
-            REComposeViewController *composeViewController = [[REComposeViewController alloc] init];
-            composeViewController.title = @"Facebook";
-            composeViewController.hasAttachment = NO;
-            // composeViewController.attachmentImage = [UIImage imageNamed:@"Flower.jpg"];
-            composeViewController.placeholderText = @"ここにテキストを書く";
-            composeViewController.delegate = self;
-            [composeViewController presentFromRootViewController];
-        });
-    }];
-    
-}
-
-- (void)postFacebookWithComment:(NSString *)comment {
-    
-    ACAccountCredential *credientital = [account credential];
-    NSString *accessToken = [credientital oauthToken];
-    NSLog(@"信頼情報 == %@/ アクセストークン == %@", credientital, accessToken);
-    
-    [SocialVideoHelper uploadFacebookVideo:[NSData dataWithContentsOfURL:self.outputURL] comment:comment account:account withCompletion:^(BOOL success, NSString *errorMessage) {
-        if (errorMessage != nil) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿エラー" message:@"投稿に失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-        }else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿完了" message:@"投稿しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-        }
-    }];
-}
-
-
-- (void)composeViewController:(REComposeViewController *)composeViewController didFinishWithResult:(REComposeResult)result {
-    [composeViewController dismissViewControllerAnimated:YES completion:nil];
-    
-    if ([composeViewController.title isEqualToString:@"Facebook"]) {
-        // facebookの処理
-        if (result == REComposeResultCancelled) {
-            NSLog(@"Cancelled");
-        }
-        
-        if (result == REComposeResultPosted) {
-            [self postFacebookWithComment:composeViewController.text];
-        }
-
-    }else if ([composeViewController.title isEqualToString:@"Twitter"]) {
-        // Twitterの処理
-        if (result == REComposeResultCancelled) {
-            NSLog(@"Cancelled");
-        }
-        
-        if (result == REComposeResultPosted) {
-            [self tweetWithComment:composeViewController.text];
-        }
-
+- (IBAction)twitterButton:(id)sender {
+    if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ツイートエラー"
+                                                        message:@"Twitterアカウントが設定されていません。"
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
     }
+    
+    NSString *text = @"テキストを入力してください";
+    NSURL *URL =_outputURL;
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"hogehoge"]];
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [controller setInitialText:text];
+    [controller addURL:URL];
+    [controller addImage:[[UIImage alloc] initWithData:imageData]];
+    controller.completionHandler =^(SLComposeViewControllerResult result){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
-- (IBAction)twitterButton {
-    ACAccountStore *store = [ACAccountStore new];
-    ACAccountType *type = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+- (IBAction)facebookButton:(id)sender {
+    if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"シェアエラー"
+                                                        message:@"facebookアカウントが設定されていません。"
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }
     
-    [store requestAccessToAccountsWithType:type options:nil completion:^(BOOL granted, NSError *error) {
-        if (! granted) {
-            NSLog(@"%@", error);
-            return;
-        }
-        
-        NSArray *accounts = [store accountsWithAccountType:type];
-        if (accounts.count < 1) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"エラー" message:@"Twitterのアカウントが設定されていません" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-            return;
-        }
-        
-        account = accounts[0];
-        
-        // ここはメインスレッドで動かす
-        dispatch_async(dispatch_get_main_queue(), ^{
-            REComposeViewController *composeViewController = [[REComposeViewController alloc] init];
-            composeViewController.title = @"Twitter";
-            composeViewController.hasAttachment = NO;
-            // composeViewController.attachmentImage = [UIImage imageNamed:@"Flower.jpg"];
-            composeViewController.placeholderText = @"ここにツイートを書く";
-            composeViewController.delegate = self;
-            [composeViewController presentFromRootViewController];
-        });
-    }];
+    NSString *text = @"hogehoge";
+    NSURL *URL = _outputURL; //[NSURL URLWithString:@"hogehoge"];
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"hogehoge"]];
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controller setInitialText:text];
+    [controller addURL:URL];
+    [controller addImage:[[UIImage alloc] initWithData:imageData]];
+    controller.completionHandler =^(SLComposeViewControllerResult result){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self presentViewController:controller animated:YES completion:nil];
     
 }
 
-- (void)tweetWithComment:(NSString *)comment {
-    [SocialVideoHelper uploadTwitterVideo:[NSData dataWithContentsOfURL:self.outputURL] comment:comment account:account withCompletion:^(BOOL success, NSString *errorMessage) {
-        if (errorMessage != nil) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿エラー" message:@"ツイートに失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-        }else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿完了" message:@"ツイートしました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-        }
-    }];
-}
+//- (IBAction)facebookButton {
+//    
+////    SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+////    [vc setInitialText:NSLocalizedString(@"FacebookShareText", nil)];
+////    [vc addURL:self.outputURL];
+////    [self presentViewController:vc animated:YES completion:nil];
+//    
+//    ACAccountStore *store = [ACAccountStore new];
+//    ACAccountType *type = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+//    
+//    NSDictionary *options = @{ ACFacebookAppIdKey : @"1718574951696653",
+//                               ACFacebookAudienceKey : ACFacebookAudienceFriends,
+//                               ACFacebookPermissionsKey : @[@"publish_actions"] };
+//    
+//    [store requestAccessToAccountsWithType:type options:options completion:^(BOOL granted, NSError *error) {
+//        if (! granted) {
+//            NSLog(@"%@", error);
+//            return;
+//        }
+//        
+//        NSArray *accounts = [store accountsWithAccountType:type];
+//        if (accounts.count < 1) {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"エラー" message:@"Facebookのアカウントが設定されていません" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//            return;
+//        }
+//        
+//        account = accounts[0];
+//        ACAccountCredential *credientital = [account credential];
+//        NSString *accessToken = [credientital oauthToken];
+//        NSLog(@"信頼情報 == %@/ アクセストークン == %@", credientital, accessToken);
+//        
+//        // ここはメインスレッドで動かす
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            REComposeViewController *composeViewController = [[REComposeViewController alloc] init];
+//            composeViewController.title = @"Facebook";
+//            composeViewController.hasAttachment = NO;
+//            // composeViewController.attachmentImage = [UIImage imageNamed:@"Flower.jpg"];
+//            composeViewController.placeholderText = @"ここにテキストを書く";
+//            composeViewController.delegate = self;
+//            [composeViewController presentFromRootViewController];
+//        });
+//    }];
+//    
+//}
+//
+//- (void)postFacebookWithComment:(NSString *)comment {
+//    
+//    ACAccountCredential *credientital = [account credential];
+//    NSString *accessToken = [credientital oauthToken];
+//    NSLog(@"信頼情報 == %@/ アクセストークン == %@", credientital, accessToken);
+//    
+//    [SocialVideoHelper uploadFacebookVideo:[NSData dataWithContentsOfURL:self.outputURL] comment:comment account:account withCompletion:^(BOOL success, NSString *errorMessage) {
+//        if (errorMessage != nil) {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿エラー" message:@"投稿に失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//        }else {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿完了" message:@"投稿しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//        }
+//    }];
+//}
+//
+//
+//- (void)composeViewController:(REComposeViewController *)composeViewController didFinishWithResult:(REComposeResult)result {
+//    [composeViewController dismissViewControllerAnimated:YES completion:nil];
+//    
+//    if ([composeViewController.title isEqualToString:@"Facebook"]) {
+//        // facebookの処理
+//        if (result == REComposeResultCancelled) {
+//            NSLog(@"Cancelled");
+//        }
+//        
+//        if (result == REComposeResultPosted) {
+//            [self postFacebookWithComment:composeViewController.text];
+//        }
+//
+//    }else if ([composeViewController.title isEqualToString:@"Twitter"]) {
+//        // Twitterの処理
+//        if (result == REComposeResultCancelled) {
+//            NSLog(@"Cancelled");
+//        }
+//        
+//        if (result == REComposeResultPosted) {
+//            [self tweetWithComment:composeViewController.text];
+//        }
+//
+//    }
+//}
+//
+//- (IBAction)twitterButton {
+//    ACAccountStore *store = [ACAccountStore new];
+//    ACAccountType *type = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+//    
+//    [store requestAccessToAccountsWithType:type options:nil completion:^(BOOL granted, NSError *error) {
+//        if (! granted) {
+//            NSLog(@"%@", error);
+//            return;
+//        }
+//        
+//        NSArray *accounts = [store accountsWithAccountType:type];
+//        if (accounts.count < 1) {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"エラー" message:@"Twitterのアカウントが設定されていません" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//            return;
+//        }
+//        
+//        account = accounts[0];
+//        
+//        
+//        
+//        // ここはメインスレッドで動かす
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"====MAIN THREAD TWEET SHAREING===");
+////            REComposeViewController *composeViewController = [[REComposeViewController alloc] init];
+////            composeViewController.title = @"Twitter";
+////            composeViewController.hasAttachment = NO;
+////            composeViewController.attachmentImage = [UIImage imageNamed:@"Flower.jpg"];
+////            composeViewController.placeholderText = @"ここにツイートを書く";
+////            composeViewController.delegate = self;
+////            [composeViewController presentFromRootViewController];
+//            
+//        });
+//    }];
+//    REComposeViewController *composeViewController = [[REComposeViewController alloc] init];
+//    composeViewController.title = @"Twitter";
+//    composeViewController.hasAttachment = NO;
+////    composeViewController.attachmentImage = [UIImage imageNamed:@"Flower.jpg"];
+//    composeViewController.placeholderText = @"ここにツイートを書く";
+//    composeViewController.delegate = self;
+//    [composeViewController presentFromRootViewController];
+//    
+//}
+//
+//- (void)tweetWithComment:(NSString *)comment {
+//    [SocialVideoHelper uploadTwitterVideo:[NSData dataWithContentsOfURL:self.outputURL] comment:comment account:account withCompletion:^(BOOL success, NSString *errorMessage) {
+//        if (errorMessage != nil) {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿エラー" message:@"ツイートに失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//        }else {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿完了" message:@"ツイートしました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alertView show];
+//        }
+//    }];
+//}
 
 - (IBAction)backToTop {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -241,3 +301,4 @@
 
 
 @end
+

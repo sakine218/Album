@@ -36,7 +36,6 @@
     NSArray *musicframeimageArray;
     NSArray *pathArray;
     NSMutableArray *buttonArray;
-    IBOutlet UIView *sideScroller;
     IBOutlet UIScrollView *buttonscrollView;
     NSArray *imagepath;
     
