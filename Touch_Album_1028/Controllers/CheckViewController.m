@@ -17,6 +17,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "MBProgressHUD.h"
 #import "ShareMovieViewController.h"
+#import "ScrollViewWithBar.h"
 
 @interface CheckViewController() <UIImagePickerControllerDelegate,UIScrollViewDelegate>
 
@@ -26,7 +27,7 @@
 
 @implementation CheckViewController {
     NSMutableArray *imageArray;
-    IBOutlet UIScrollView *scrollView;
+    IBOutlet ScrollViewWithBar *scrollView;
     NSMutableArray *buttonImageArray;
     float currentX;
     NSMutableArray *tmpArray;
@@ -36,7 +37,7 @@
     NSArray *musicframeimageArray;
     NSArray *pathArray;
     NSMutableArray *buttonArray;
-    IBOutlet UIScrollView *buttonscrollView;
+    IBOutlet ScrollViewWithBar *buttonscrollView;
     NSArray *imagepath;
     
     //  BGMのため

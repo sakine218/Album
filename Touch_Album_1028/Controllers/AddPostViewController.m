@@ -102,12 +102,12 @@
     page4.bgImage = [UIImage imageNamed:@"Tutorial3.png"];
     
     EAIntroPage *page5 = [EAIntroPage page];
-    page4.bgImage = [UIImage imageNamed:@"Tutorial4.png"];
+    page5.bgImage = [UIImage imageNamed:@"Tutorial4.png"];
     
     EAIntroPage *page6 = [EAIntroPage page];
-    page4.bgImage = [UIImage imageNamed:@"Tutorial5.png"];
+    page6.bgImage = [UIImage imageNamed:@"Tutorial5.png"];
     
-    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds andPages:@[page1,page2,page3,page4]];
+    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds andPages:@[page1,page2,page3,page4,page5,page6]];
     
     [intro.skipButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     

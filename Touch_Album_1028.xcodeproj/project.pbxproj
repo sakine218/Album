@@ -16,15 +16,10 @@
 		812DD3991C7023DA00EA9EB9 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812DD3981C7023DA00EA9EB9 /* AlbumViewController.m */; };
 		812DD39D1C7086FE00EA9EB9 /* menuscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD39C1C7086FE00EA9EB9 /* menuscreen.png */; };
 		812DD3B41C74B49A00EA9EB9 /* Tutorial0.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3AF1C74B49A00EA9EB9 /* Tutorial0.png */; };
-		812DD3B51C74B49A00EA9EB9 /* Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B01C74B49A00EA9EB9 /* Tutorial1.png */; };
-		812DD3B61C74B49A00EA9EB9 /* Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B11C74B49A00EA9EB9 /* Tutorial2.png */; };
-		812DD3B71C74B49A00EA9EB9 /* Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B21C74B49A00EA9EB9 /* Tutorial3.png */; };
-		812DD3B81C74B49A00EA9EB9 /* Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B31C74B49A00EA9EB9 /* Tutorial4.png */; };
 		812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3B91C7720F000EA9EB9 /* Tutorial5.png */; };
 		812DD3C01C774BEF00EA9EB9 /* newbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DD3BF1C774BEF00EA9EB9 /* newbutton.png */; };
 		813181E11C6183610066D5E0 /* shareicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DD1C6183610066D5E0 /* shareicon2.png */; };
 		813181E21C6183610066D5E0 /* shareicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DE1C6183610066D5E0 /* shareicon3.png */; };
-		813181E31C6183610066D5E0 /* shareicon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 813181DF1C6183610066D5E0 /* shareicon4.png */; };
 		8133CF801C4F9D3B000A0AC9 /* otonashi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8133CF7F1C4F9D3B000A0AC9 /* otonashi.mp3 */; };
 		8133CF861C4FA9B6000A0AC9 /* ShareMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8133CF851C4FA9B6000A0AC9 /* ShareMovieViewController.m */; };
 		8133CF8A1C5DED82000A0AC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8133CF891C5DED82000A0AC9 /* icon.png */; };
@@ -95,6 +90,13 @@
 		81DD11D61C7DC2EA00BA8106 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */; };
 		81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11D71C7DCC0C00BA8106 /* guide.png */; };
 		81E40B481C46578B00804108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E40B471C46578B00804108 /* main.m */; };
+		81EF0CF31CB20F2E00234CE8 /* shareicon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF21CB20F2E00234CE8 /* shareicon4.png */; };
+		81EF0CFB1CB254DF00234CE8 /* Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF71CB254DF00234CE8 /* Tutorial4.png */; };
+		81EF0CFC1CB254DF00234CE8 /* Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF81CB254DF00234CE8 /* Tutorial3.png */; };
+		81EF0CFD1CB254DF00234CE8 /* Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF91CB254DF00234CE8 /* Tutorial2.png */; };
+		81EF0CFE1CB254DF00234CE8 /* Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CFA1CB254DF00234CE8 /* Tutorial1.png */; };
+		81EF0D001CB33C4500234CE8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EF0CFF1CB33C4500234CE8 /* AssetsLibrary.framework */; };
+		81EF0D031CB3427B00234CE8 /* ScrollViewWithBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */; };
 		A8F4367C22EE5F0D060DE6E9 /* libPods-Touch_Album_1028.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */; };
 /* End PBXBuildFile section */
 
@@ -121,15 +123,10 @@
 		812DD3981C7023DA00EA9EB9 /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
 		812DD39C1C7086FE00EA9EB9 /* menuscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuscreen.png; sourceTree = "<group>"; };
 		812DD3AF1C74B49A00EA9EB9 /* Tutorial0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial0.png; sourceTree = "<group>"; };
-		812DD3B01C74B49A00EA9EB9 /* Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial1.png; sourceTree = "<group>"; };
-		812DD3B11C74B49A00EA9EB9 /* Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial2.png; sourceTree = "<group>"; };
-		812DD3B21C74B49A00EA9EB9 /* Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial3.png; sourceTree = "<group>"; };
-		812DD3B31C74B49A00EA9EB9 /* Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4.png; sourceTree = "<group>"; };
 		812DD3B91C7720F000EA9EB9 /* Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial5.png; sourceTree = "<group>"; };
 		812DD3BF1C774BEF00EA9EB9 /* newbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbutton.png; sourceTree = "<group>"; };
 		813181DD1C6183610066D5E0 /* shareicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon2.png; sourceTree = "<group>"; };
 		813181DE1C6183610066D5E0 /* shareicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon3.png; sourceTree = "<group>"; };
-		813181DF1C6183610066D5E0 /* shareicon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon4.png; sourceTree = "<group>"; };
 		8133CF7F1C4F9D3B000A0AC9 /* otonashi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = otonashi.mp3; sourceTree = "<group>"; };
 		8133CF841C4FA9B6000A0AC9 /* ShareMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareMovieViewController.h; sourceTree = "<group>"; };
 		8133CF851C4FA9B6000A0AC9 /* ShareMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareMovieViewController.m; sourceTree = "<group>"; };
@@ -232,6 +229,14 @@
 		81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		81DD11D71C7DCC0C00BA8106 /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
 		81E40B471C46578B00804108 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		81EF0CF21CB20F2E00234CE8 /* shareicon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon4.png; sourceTree = "<group>"; };
+		81EF0CF71CB254DF00234CE8 /* Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4.png; sourceTree = "<group>"; };
+		81EF0CF81CB254DF00234CE8 /* Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial3.png; sourceTree = "<group>"; };
+		81EF0CF91CB254DF00234CE8 /* Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial2.png; sourceTree = "<group>"; };
+		81EF0CFA1CB254DF00234CE8 /* Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial1.png; sourceTree = "<group>"; };
+		81EF0CFF1CB33C4500234CE8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewWithBar.h; sourceTree = "<group>"; };
+		81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewWithBar.m; sourceTree = "<group>"; };
 		A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Touch_Album_1028.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C418EF732EB9C7524722E337 /* Pods-Touch_Album_1028.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Touch_Album_1028.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Touch_Album_1028/Pods-Touch_Album_1028.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EF0D001CB33C4500234CE8 /* AssetsLibrary.framework in Frameworks */,
 				8167F6D21C66EDCC00264BD0 /* Social.framework in Frameworks */,
 				8167F6841C633E8F00264BD0 /* MediaPlayer.framework in Frameworks */,
 				81CD90761C2E694A0038A565 /* QuartzCore.framework in Frameworks */,
@@ -272,6 +278,7 @@
 		8167F6D31C670DCD00264BD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81EF0CFF1CB33C4500234CE8 /* AssetsLibrary.framework */,
 				8126002A1BEA1F4B008775F9 /* AVFoundation.framework */,
 				8167F6831C633E8F00264BD0 /* MediaPlayer.framework */,
 				81CD90751C2E694A0038A565 /* QuartzCore.framework */,
@@ -299,6 +306,8 @@
 				8133CF851C4FA9B6000A0AC9 /* ShareMovieViewController.m */,
 				819790DC1BE0DD5D00CEDE61 /* AnimationViewController.h */,
 				819790DD1BE0DD5D00CEDE61 /* AnimationViewController.m */,
+				81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */,
+				81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,10 +343,10 @@
 				8108E04D1C05D74C00040DBE /* Defaults */,
 				819790C11BE0DCAB00CEDE61 /* Images.xcassets */,
 				812DD3AF1C74B49A00EA9EB9 /* Tutorial0.png */,
-				812DD3B01C74B49A00EA9EB9 /* Tutorial1.png */,
-				812DD3B11C74B49A00EA9EB9 /* Tutorial2.png */,
-				812DD3B21C74B49A00EA9EB9 /* Tutorial3.png */,
-				812DD3B31C74B49A00EA9EB9 /* Tutorial4.png */,
+				81EF0CFA1CB254DF00234CE8 /* Tutorial1.png */,
+				81EF0CF91CB254DF00234CE8 /* Tutorial2.png */,
+				81EF0CF81CB254DF00234CE8 /* Tutorial3.png */,
+				81EF0CF71CB254DF00234CE8 /* Tutorial4.png */,
 				812DD3B91C7720F000EA9EB9 /* Tutorial5.png */,
 				8133CF8B1C60A836000A0AC9 /* hyoushi.png */,
 				812DD39C1C7086FE00EA9EB9 /* menuscreen.png */,
@@ -373,7 +382,7 @@
 				8167F70D1C6B376400264BD0 /* shareicon.png */,
 				813181DD1C6183610066D5E0 /* shareicon2.png */,
 				813181DE1C6183610066D5E0 /* shareicon3.png */,
-				813181DF1C6183610066D5E0 /* shareicon4.png */,
+				81EF0CF21CB20F2E00234CE8 /* shareicon4.png */,
 				81DD11D21C7DC29F00BA8106 /* start.png */,
 				8167F6CD1C66EB9E00264BD0 /* shinki.png */,
 				8167F6CF1C66EBA900264BD0 /* seen.png */,
@@ -636,14 +645,14 @@
 				8167F6CE1C66EB9E00264BD0 /* shinki.png in Resources */,
 				8108E0531C05D74C00040DBE /* Default-736h@3x.png in Resources */,
 				8133CF961C60B911000A0AC9 /* share.png in Resources */,
-				812DD3B51C74B49A00EA9EB9 /* Tutorial1.png in Resources */,
-				812DD3B81C74B49A00EA9EB9 /* Tutorial4.png in Resources */,
 				8167F67D1C61976800264BD0 /* making.png in Resources */,
+				81EF0CF31CB20F2E00234CE8 /* shareicon4.png in Resources */,
 				812DD3B41C74B49A00EA9EB9 /* Tutorial0.png in Resources */,
 				819791161BE0DD6A00CEDE61 /* ELCAlbumPickerController.xib in Resources */,
 				819791171BE0DD6A00CEDE61 /* ELCAssetPicker.xib in Resources */,
 				812DD39D1C7086FE00EA9EB9 /* menuscreen.png in Resources */,
 				8167F6C71C66E3ED00264BD0 /* onpuframe4.png in Resources */,
+				81EF0CFB1CB254DF00234CE8 /* Tutorial4.png in Resources */,
 				81DD11C71C7DC1FF00BA8106 /* onpu7.png in Resources */,
 				8133CF8A1C5DED82000A0AC9 /* icon.png in Resources */,
 				8167F6791C61962800264BD0 /* transition.png in Resources */,
@@ -652,13 +661,12 @@
 				812DD3C01C774BEF00EA9EB9 /* newbutton.png in Resources */,
 				8167F6C81C66E3ED00264BD0 /* onpuframe5.png in Resources */,
 				8108E0521C05D74C00040DBE /* Default-667h@2x.png in Resources */,
+				81EF0CFC1CB254DF00234CE8 /* Tutorial3.png in Resources */,
 				81DD11C21C7DC1FF00BA8106 /* onpu2.png in Resources */,
 				81DD11D31C7DC29F00BA8106 /* start.png in Resources */,
 				8167F7081C67342900264BD0 /* albumscreen.png in Resources */,
 				8167F6821C62F20B00264BD0 /* sample2.mp3 in Resources */,
-				812DD3B71C74B49A00EA9EB9 /* Tutorial3.png in Resources */,
 				813181E11C6183610066D5E0 /* shareicon2.png in Resources */,
-				812DD3B61C74B49A00EA9EB9 /* Tutorial2.png in Resources */,
 				8167F6C91C66E3ED00264BD0 /* onpuframe6.png in Resources */,
 				812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */,
 				81DD11C41C7DC1FF00BA8106 /* onpu4.png in Resources */,
@@ -666,6 +674,7 @@
 				813181E21C6183610066D5E0 /* shareicon3.png in Resources */,
 				8167F6801C61ADBC00264BD0 /* Main.storyboard in Resources */,
 				8167F6CA1C66E3ED00264BD0 /* onpuframe7.png in Resources */,
+				81EF0CFD1CB254DF00234CE8 /* Tutorial2.png in Resources */,
 				819791181BE0DD6A00CEDE61 /* ELCAssetTablePicker.xib in Resources */,
 				81DD11D01C7DC29700BA8106 /* sampleP1.mp3 in Resources */,
 				8133CF8C1C60A836000A0AC9 /* hyoushi.png in Resources */,
@@ -676,10 +685,10 @@
 				81DD11CF1C7DC29700BA8106 /* sampleOk.mp3 in Resources */,
 				819790C21BE0DCAB00CEDE61 /* Images.xcassets in Resources */,
 				8167F6D01C66EBA900264BD0 /* seen.png in Resources */,
-				813181E31C6183610066D5E0 /* shareicon4.png in Resources */,
 				8167F6CC1C66E9E800264BD0 /* mark.png in Resources */,
 				8108E0511C05D74C00040DBE /* Default-568h@2x.png in Resources */,
 				81DD11C01C7DC1FF00BA8106 /* onpu0.png in Resources */,
+				81EF0CFE1CB254DF00234CE8 /* Tutorial1.png in Resources */,
 				81DD11C51C7DC1FF00BA8106 /* onpu5.png in Resources */,
 				8133CF801C4F9D3B000A0AC9 /* otonashi.mp3 in Resources */,
 				81DD11D11C7DC29700BA8106 /* sampleP2.mp3 in Resources */,
@@ -760,6 +769,7 @@
 				8167F7111C6B49C800264BD0 /* SocialVideoHelper.m in Sources */,
 				81DD11D61C7DC2EA00BA8106 /* MBProgressHUD.m in Sources */,
 				819791111BE0DD6A00CEDE61 /* ELCAssetCell.m in Sources */,
+				81EF0D031CB3427B00234CE8 /* ScrollViewWithBar.m in Sources */,
 				8197910E1BE0DD6A00CEDE61 /* CheckViewController.m in Sources */,
 				81CD90671C2A8FB40038A565 /* DMMovieMaker.m in Sources */,
 				819790E91BE0DD5D00CEDE61 /* AppDelegate.m in Sources */,
