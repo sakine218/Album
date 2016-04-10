@@ -217,7 +217,7 @@
 //            });
         }
         
-        /* ここをActionSheetDelegateにまかせればOK
+        // ここをActionSheetDelegateにまかせればOK
         account = accounts[0];
         
         // ここはメインスレッドで動かす
@@ -231,7 +231,7 @@
             composeViewController.delegate = self;
             [composeViewController presentFromViewController:self];
         });
-         */
+        
     }];
    }
 

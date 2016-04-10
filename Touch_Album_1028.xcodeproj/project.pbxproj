@@ -71,6 +71,11 @@
 		819791271BE0DD7800CEDE61 /* TemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 819791221BE0DD7800CEDE61 /* TemplateView.m */; };
 		819791281BE0DD7800CEDE61 /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819791241BE0DD7800CEDE61 /* TemplateViewController.m */; };
 		8197912B1BE0DD8400CEDE61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8197912A1BE0DD8400CEDE61 /* ViewController.m */; };
+		81BE184F1CB7D79D00BC34DC /* 3.5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BE184E1CB7D79D00BC34DC /* 3.5inch.storyboard */; };
+		81BE18541CB7DD3F00BC34DC /* app3.5-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BE18501CB7DD3F00BC34DC /* app3.5-4.png */; };
+		81BE18551CB7DD3F00BC34DC /* app3.5-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BE18511CB7DD3F00BC34DC /* app3.5-3.png */; };
+		81BE18571CB7DD3F00BC34DC /* app3.5-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BE18531CB7DD3F00BC34DC /* app3.5-1.png */; };
+		81BE18591CB7DF9100BC34DC /* app3.5-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BE18581CB7DF9100BC34DC /* app3.5-2.png */; };
 		81CD90671C2A8FB40038A565 /* DMMovieMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD90661C2A8FB40038A565 /* DMMovieMaker.m */; };
 		81CD90761C2E694A0038A565 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CD90751C2E694A0038A565 /* QuartzCore.framework */; };
 		81DD11C01C7DC1FF00BA8106 /* onpu0.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11B81C7DC1FF00BA8106 /* onpu0.png */; };
@@ -208,6 +213,11 @@
 		819791241BE0DD7800CEDE61 /* TemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateViewController.m; sourceTree = "<group>"; };
 		819791291BE0DD8400CEDE61 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8197912A1BE0DD8400CEDE61 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		81BE184E1CB7D79D00BC34DC /* 3.5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 3.5inch.storyboard; sourceTree = "<group>"; };
+		81BE18501CB7DD3F00BC34DC /* app3.5-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app3.5-4.png"; path = "../../../app3.5-4.png"; sourceTree = "<group>"; };
+		81BE18511CB7DD3F00BC34DC /* app3.5-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app3.5-3.png"; path = "../../../app3.5-3.png"; sourceTree = "<group>"; };
+		81BE18531CB7DD3F00BC34DC /* app3.5-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app3.5-1.png"; path = "../../../app3.5-1.png"; sourceTree = "<group>"; };
+		81BE18581CB7DF9100BC34DC /* app3.5-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app3.5-2.png"; path = "../../../app3.5-2.png"; sourceTree = "<group>"; };
 		81CD90651C2A8FB40038A565 /* DMMovieMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMovieMaker.h; sourceTree = "<group>"; };
 		81CD90661C2A8FB40038A565 /* DMMovieMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMovieMaker.m; sourceTree = "<group>"; };
 		81CD90751C2E694A0038A565 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -235,8 +245,8 @@
 		81EF0CF91CB254DF00234CE8 /* Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial2.png; sourceTree = "<group>"; };
 		81EF0CFA1CB254DF00234CE8 /* Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial1.png; sourceTree = "<group>"; };
 		81EF0CFF1CB33C4500234CE8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewWithBar.h; sourceTree = "<group>"; };
-		81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewWithBar.m; sourceTree = "<group>"; };
+		81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewWithBar.h; path = ../Controllers/ScrollViewWithBar.h; sourceTree = "<group>"; };
+		81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewWithBar.m; path = ../Controllers/ScrollViewWithBar.m; sourceTree = "<group>"; };
 		A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Touch_Album_1028.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C418EF732EB9C7524722E337 /* Pods-Touch_Album_1028.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Touch_Album_1028.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Touch_Album_1028/Pods-Touch_Album_1028.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,8 +316,6 @@
 				8133CF851C4FA9B6000A0AC9 /* ShareMovieViewController.m */,
 				819790DC1BE0DD5D00CEDE61 /* AnimationViewController.h */,
 				819790DD1BE0DD5D00CEDE61 /* AnimationViewController.m */,
-				81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */,
-				81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,13 +323,15 @@
 		8167F6D51C670E0600264BD0 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				81EF0D011CB3427B00234CE8 /* ScrollViewWithBar.h */,
+				81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */,
 				8167F70F1C6B49C800264BD0 /* SocialVideoHelper.h */,
 				8167F7101C6B49C800264BD0 /* SocialVideoHelper.m */,
-				819790E01BE0DD5D00CEDE61 /* ASScreenRecorder */,
 				81CD90651C2A8FB40038A565 /* DMMovieMaker.h */,
 				81CD90661C2A8FB40038A565 /* DMMovieMaker.m */,
 				81DD11D41C7DC2EA00BA8106 /* MBProgressHUD.h */,
 				81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */,
+				819790E01BE0DD5D00CEDE61 /* ASScreenRecorder */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -389,6 +399,10 @@
 				8167F6781C61962800264BD0 /* transition.png */,
 				812DD3BF1C774BEF00EA9EB9 /* newbutton.png */,
 				81DD11D71C7DCC0C00BA8106 /* guide.png */,
+				81BE18501CB7DD3F00BC34DC /* app3.5-4.png */,
+				81BE18511CB7DD3F00BC34DC /* app3.5-3.png */,
+				81BE18581CB7DF9100BC34DC /* app3.5-2.png */,
+				81BE18531CB7DD3F00BC34DC /* app3.5-1.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -397,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				8167F67E1C61ADBC00264BD0 /* Main.storyboard */,
+				81BE184E1CB7D79D00BC34DC /* 3.5inch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -638,9 +653,11 @@
 			files = (
 				81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */,
 				8197911D1BE0DD6A00CEDE61 /* Overlay.png in Resources */,
+				81BE18551CB7DD3F00BC34DC /* app3.5-3.png in Resources */,
 				81DD11C11C7DC1FF00BA8106 /* onpu1.png in Resources */,
 				8167F6B51C66E2C300264BD0 /* onpuframe0.png in Resources */,
 				812600291BEA1EC2008775F9 /* sample.mp3 in Resources */,
+				81BE18541CB7DD3F00BC34DC /* app3.5-4.png in Resources */,
 				8167F70E1C6B376400264BD0 /* shareicon.png in Resources */,
 				8167F6CE1C66EB9E00264BD0 /* shinki.png in Resources */,
 				8108E0531C05D74C00040DBE /* Default-736h@3x.png in Resources */,
@@ -657,6 +674,7 @@
 				8133CF8A1C5DED82000A0AC9 /* icon.png in Resources */,
 				8167F6791C61962800264BD0 /* transition.png in Resources */,
 				81DD11C31C7DC1FF00BA8106 /* onpu3.png in Resources */,
+				81BE184F1CB7D79D00BC34DC /* 3.5inch.storyboard in Resources */,
 				8167F6C61C66E3ED00264BD0 /* onpuframe3.png in Resources */,
 				812DD3C01C774BEF00EA9EB9 /* newbutton.png in Resources */,
 				8167F6C81C66E3ED00264BD0 /* onpuframe5.png in Resources */,
@@ -670,6 +688,7 @@
 				8167F6C91C66E3ED00264BD0 /* onpuframe6.png in Resources */,
 				812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */,
 				81DD11C41C7DC1FF00BA8106 /* onpu4.png in Resources */,
+				81BE18591CB7DF9100BC34DC /* app3.5-2.png in Resources */,
 				81DD11C61C7DC1FF00BA8106 /* onpu6.png in Resources */,
 				813181E21C6183610066D5E0 /* shareicon3.png in Resources */,
 				8167F6801C61ADBC00264BD0 /* Main.storyboard in Resources */,
@@ -682,6 +701,7 @@
 				8197911E1BE0DD6A00CEDE61 /* Overlay@2x.png in Resources */,
 				81DD11CE1C7DC29700BA8106 /* sampleO2.mp3 in Resources */,
 				8167F6C51C66E3ED00264BD0 /* onpuframe2.png in Resources */,
+				81BE18571CB7DD3F00BC34DC /* app3.5-1.png in Resources */,
 				81DD11CF1C7DC29700BA8106 /* sampleOk.mp3 in Resources */,
 				819790C21BE0DCAB00CEDE61 /* Images.xcassets in Resources */,
 				8167F6D01C66EBA900264BD0 /* seen.png in Resources */,

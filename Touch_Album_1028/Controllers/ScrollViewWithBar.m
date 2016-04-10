@@ -77,19 +77,18 @@
     }else{
         [self bringSubviewToFront:barView];
     }
-    float barWidth = 7.0;
-    float barHeight = self.frame.size.height * self.frame.size.height / self.contentSize.height;
+    float barWidth = 4.0;
+    float barHeight = 120;
     
-    barView.frame = CGRectMake(self.frame.size.width-barWidth-1,
-                               0,
-                               barWidth,
-                               barHeight);
+    barView.frame = CGRectMake(0,self.frame.size.height-barWidth,
+                               barHeight,
+                               barWidth);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGRect barFrame = barView.frame;
-    barFrame.origin.y = scrollView.contentOffset.y + scrollView.frame.size.height * scrollView.contentOffset.y / scrollView.contentSize.height;
+    barFrame.origin.x = scrollView.contentOffset.x + scrollView.frame.size.width * scrollView.contentOffset.x / scrollView.contentSize.width;
     barView.frame = barFrame;
 }
 

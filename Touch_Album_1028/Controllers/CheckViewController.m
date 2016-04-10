@@ -59,6 +59,10 @@ const CGFloat pWidth  = 280;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    scrollView.showsHorizontalScrollIndicator = NO;
+    buttonscrollView.showsHorizontalScrollIndicator = NO;
+
+    
     NSLog(@"hoge");
     
     //    _playButton = buttonscrollView;

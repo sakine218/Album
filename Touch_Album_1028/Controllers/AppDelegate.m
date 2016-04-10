@@ -17,6 +17,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    CGRect display = [UIScreen mainScreen].bounds;
+    
+    if (display.size.height == 568) { // iPhone 5
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *rootViewController = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = rootViewController;
+    } else if (display.size.height == 667) { // iPhone 6
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *rootViewController = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = rootViewController;
+    } else if (display.size.height == 736) { // iPhone 6+
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController* rootViewController = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = rootViewController;
+    }else { // iPhone 4 or iPad
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"3.5inch" bundle:nil];
+        UIViewController *rootViewController = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = rootViewController;
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }

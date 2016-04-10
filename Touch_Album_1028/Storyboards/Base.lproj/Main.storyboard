@@ -188,7 +188,7 @@
                                 <rect key="frame" x="128" y="427" width="65" height="65"/>
                                 <state key="normal" image="shareicon2.png"/>
                                 <connections>
-                                    <action selector="twitterButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="s8F-ow-KIS"/>
+                                    <action selector="twitterButton" destination="n0q-5Y-dmy" eventType="touchUpInside" id="J4Y-qt-K5x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfJ-pY-lu9">
