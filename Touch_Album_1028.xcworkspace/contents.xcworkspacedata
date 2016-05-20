@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Touch_Album_1028.xcodeproj">
+      location = "group:/Users/pompom/Desktop/Touch_Album_1028/Touch_Album_1028r.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
