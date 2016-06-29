@@ -175,7 +175,9 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ (%ld)",[g valueForProperty:ALAssetsGroupPropertyName], (long)gCount];
     UIImage* image = [UIImage imageWithCGImage:[g posterImage]];
-    image = [self resize:image to:CGSizeMake(78, 78)];
+//    cell.imageView.layer.size = CGSizeMake(78, 78);
+    cell.imageView.frame = CGRectMake(0, 0, 78,78);
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [cell.imageView setImage:image];
 	[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 	
@@ -189,6 +191,7 @@
     // Pass 1.0 to force exact pixel size.
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    [image drawInRect:CGRectMake(0, 0, 200, 200)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
@@ -201,10 +204,9 @@
 {
 	ELCAssetTablePicker *picker = [[ELCAssetTablePicker alloc] initWithNibName: nil bundle: nil];
 	picker.parent = self;
-
     picker.assetGroup = [self.assetGroups objectAtIndex:indexPath.row];
     [picker.assetGroup setAssetsFilter:[self assetFilter]];
-    
+
 	picker.assetPickerFilterDelegate = self.assetPickerFilterDelegate;
 	
 	[self.navigationController pushViewController:picker animated:YES];

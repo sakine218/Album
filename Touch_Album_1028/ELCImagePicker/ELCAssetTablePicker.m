@@ -28,7 +28,7 @@
     if (self) {
         //Sets a reasonable default bigger then 0 for columns
         //So that we don't have a divide by 0 scenario
-        self.columns = 4;
+        self.columns = 9;
     }
     return self;
 }
@@ -58,7 +58,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.columns = self.view.bounds.size.width / 80;
+    if ([UIScreen mainScreen].bounds.size.height == 1024){
+        self.columns = 9;
+    }else{
+        self.columns = 4;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated

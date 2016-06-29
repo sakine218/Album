@@ -62,23 +62,26 @@
 - (void)showTutorial {
     // basic
     EAIntroPage *page1 = [EAIntroPage page];
-    page1.bgImage = [UIImage imageNamed:@"Tutorial0.png"];
-    
     EAIntroPage *page2 = [EAIntroPage page];
-    page2.bgImage = [UIImage imageNamed:@"Tutorial1.png"];
-
     EAIntroPage *page3 = [EAIntroPage page];
-    page3.bgImage = [UIImage imageNamed:@"Tutorial2.png"];
-
     EAIntroPage *page4 = [EAIntroPage page];
-    page4.bgImage = [UIImage imageNamed:@"Tutorial3.png"];
-    
     EAIntroPage *page5 = [EAIntroPage page];
-    page5.bgImage = [UIImage imageNamed:@"Tutorial4.png"];
-    
     EAIntroPage *page6 = [EAIntroPage page];
-    page6.bgImage = [UIImage imageNamed:@"Tutorial5.png"];
-
+    if ([UIScreen mainScreen].bounds.size.height == 1024) {
+        page1.bgImage = [UIImage imageNamed:@"ipadTutorial0.png"];
+        page2.bgImage = [UIImage imageNamed:@"ipadTutorial1.png"];
+        page3.bgImage = [UIImage imageNamed:@"ipadTutorial2.png"];
+        page4.bgImage = [UIImage imageNamed:@"ipadTutorial3.png"];
+        page5.bgImage = [UIImage imageNamed:@"ipadTutorial4.png"];
+        page6.bgImage = [UIImage imageNamed:@"ipadTutorial5.png"];
+    }else{
+        page1.bgImage = [UIImage imageNamed:@"Tutorial0.png"];
+        page2.bgImage = [UIImage imageNamed:@"Tutorial1.png"];
+        page3.bgImage = [UIImage imageNamed:@"Tutorial2.png"];
+        page4.bgImage = [UIImage imageNamed:@"Tutorial3.png"];
+        page5.bgImage = [UIImage imageNamed:@"Tutorial4.png"];
+        page6.bgImage = [UIImage imageNamed:@"Tutorial5.png"];
+    }
     EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds andPages:@[page1,page2,page3,page4,page5,page6]];
     
     [intro.skipButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

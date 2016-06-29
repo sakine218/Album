@@ -60,7 +60,12 @@
     //                                               object:player];
     
     //movieplayView = dmPlayer.Player.view
-    player.view.frame = CGRectMake(40, 160, 250, 250);
+    if ([UIScreen mainScreen].bounds.size.height == 1024) {
+        player.view.frame = CGRectMake(130, 265, 510, 510);
+    }else{
+        player.view.frame = CGRectMake(40, 160, 250, 250);
+
+    }
     [self.view addSubview:player.view];
     [player prepareToPlay];
     //[moviePlayer prepareToPlay];

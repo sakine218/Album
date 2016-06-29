@@ -1,88 +1,239 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="wYQ-7c-mlF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="sUH-dB-L1m">
+        <scene sceneID="hu9-TI-lpn">
             <objects>
-                <viewController id="kGM-bY-IaG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HeY-UM-zJr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="wYQ-7c-mlF" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ol-V9-Zb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="xKM-eM-Kii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Fb-OJ-gxn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8ik-mO-Ze4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app9.7-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-ob-2KY">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
+                            <button opaque="NO" contentMode="bottom" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jcL-Rk-HMd">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <size key="titleShadowOffset" width="3" height="1"/>
+                                <state key="normal" image="start9.7.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FoG-XG-QeK" kind="modal" id="j8u-EB-66y"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f8d-Ga-xNh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="startButton" destination="jcL-Rk-HMd" id="wya-hS-qzF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cKd-lY-aVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqL-6p-kxo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181" y="305"/>
+            <point key="canvasLocation" x="-399.36000000000001" y="532.48000000000002"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="CeZ-8w-QB8">
+        <!--Add Post View Controller-->
+        <scene sceneID="ZWh-ep-QYF">
             <objects>
-                <viewController id="A5L-oX-w62" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1fF-dh-GfF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="FoG-XG-QeK" customClass="AddPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sPr-b1-6eI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AAQ-wk-um3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IQX-Rs-6yP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CsR-Z9-SL7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app9.7-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Ku-zQ-Icf">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAB-og-tGn">
+                                <rect key="frame" x="20" y="506" width="732" height="324"/>
+                                <state key="normal" image="guidebutton9.7.png">
+                                    <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="guideButton" destination="FoG-XG-QeK" eventType="touchUpInside" id="ca3-BE-P1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-a2-L8J">
+                                <rect key="frame" x="6" y="226" width="750" height="353"/>
+                                <state key="normal" image="newbutton9.7.png">
+                                    <color key="titleColor" red="0.15691137569999999" green="0.15691137569999999" blue="0.15691137569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showELCPicker:" destination="FoG-XG-QeK" eventType="touchUpInside" id="7Zj-CT-7Er"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ixc-xT-Sfs"/>
+                    <connections>
+                        <outlet property="guideButton" destination="MAB-og-tGn" id="PG8-z9-vpv"/>
+                        <segue destination="TUx-aM-2SB" kind="modal" identifier="toNext" id="p8m-wl-SbZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ARl-e6-aI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2e-sp-Cvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="299"/>
+            <point key="canvasLocation" x="746.24000000000001" y="530.77333333333331"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EG3-dN-gNX">
+        <!--Check View Controller-->
+        <scene sceneID="4nj-33-mcu">
             <objects>
-                <viewController id="fb9-eV-Jhi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RMZ-GU-WSh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="POO-hF-OgX" customClass="CheckViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z59-c9-OUi"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxM-7x-L7G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMO-lT-bf4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pbv-SL-KSR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app9.7-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4G-zD-JLy">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfL-mU-8El">
+                                <rect key="frame" x="0.0" y="19" width="768" height="44"/>
+                                <items>
+                                    <navigationItem id="K8G-y6-IuL">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="0hz-VV-9wX"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfv-Ry-QKm" customClass="ScrollViewWithBar">
+                                <rect key="frame" x="0.0" y="860" width="768" height="164"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Neb-te-szN" customClass="ScrollViewWithBar">
+                                <rect key="frame" x="84" y="223" width="600" height="600"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rO1-mN-jV8">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="A7L-ZH-Q9p">
+                            <connections>
+                                <action selector="backToTop" destination="POO-hF-OgX" id="0Ro-vS-qUu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="MTg-PE-N9E">
+                            <connections>
+                                <action selector="okButton:" destination="POO-hF-OgX" id="TZ6-Wh-1Vw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonscrollView" destination="mfv-Ry-QKm" id="PCf-Ts-Rfe"/>
+                        <outlet property="scrollView" destination="Neb-te-szN" id="AuI-Gl-nJr"/>
+                        <segue destination="Cdp-ez-c29" kind="push" identifier="toPreview" id="ddn-UD-iKm"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNG-aH-V8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFD-13-dAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="299"/>
+            <point key="canvasLocation" x="3018.2400000000002" y="532.48000000000002"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DCK-46-VRG">
+        <!--sharemovieViewController-->
+        <scene sceneID="ikj-Q3-taF">
             <objects>
-                <viewController id="kXH-Tk-l9K" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="38j-a6-NVk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController title="sharemovieViewController" id="Cdp-ez-c29" customClass="ShareMovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jtk-ok-n07"/>
+                        <viewControllerLayoutGuide type="bottom" id="0pS-hg-7bd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8tW-Ot-LdD">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2mk-yc-yqo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app9.7-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="UhE-Ne-jpJ">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bt-DP-lfp">
+                                <rect key="frame" x="500" y="795" width="109" height="109"/>
+                                <state key="normal" image="shareicon3.png"/>
+                                <connections>
+                                    <action selector="facebookButton" destination="Cdp-ez-c29" eventType="touchUpInside" id="AcF-uu-cfs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWg-Xg-QJf">
+                                <rect key="frame" x="330" y="795" width="109" height="109"/>
+                                <state key="normal" image="shareicon2.png"/>
+                                <connections>
+                                    <action selector="twitterButton" destination="Cdp-ez-c29" eventType="touchUpInside" id="0M8-zC-P4v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPx-2S-eFs">
+                                <rect key="frame" x="158" y="795" width="109" height="109"/>
+                                <state key="normal" image="shareicon.png"/>
+                                <connections>
+                                    <action selector="BtnPush:" destination="Cdp-ez-c29" eventType="touchUpInside" id="v50-Ac-4tU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mA3-5f-7Rn">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="x2g-e1-OUk">
+                            <connections>
+                                <action selector="backToTop" destination="Cdp-ez-c29" id="JTH-IB-ClC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="facebookButtton" destination="4Bt-DP-lfp" id="5mM-KQ-Fby"/>
+                        <outlet property="twitterButton" destination="ZWg-Xg-QJf" id="Ykz-xi-hWV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WZK-r7-zI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QF6-aJ-cxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="305"/>
+            <point key="canvasLocation" x="4257" y="532"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CKR-bF-shm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUx-aM-2SB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="K7R-l6-MHj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DlQ-Gs-CE0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="POO-hF-OgX" kind="relationship" relationship="rootViewController" id="KHf-qV-BBV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxr-aG-Z78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.28" y="532.48000000000002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app9.7-1.png" width="768" height="1024"/>
+        <image name="app9.7-2.png" width="768" height="1024"/>
+        <image name="app9.7-3.png" width="768" height="1024"/>
+        <image name="app9.7-4.png" width="768" height="1024"/>
+        <image name="guidebutton9.7.png" width="500" height="300"/>
+        <image name="newbutton9.7.png" width="500" height="300"/>
+        <image name="shareicon.png" width="300" height="300"/>
+        <image name="shareicon2.png" width="300" height="300"/>
+        <image name="shareicon3.png" width="300" height="300"/>
+        <image name="start9.7.png" width="768" height="1024"/>
+    </resources>
 </document>

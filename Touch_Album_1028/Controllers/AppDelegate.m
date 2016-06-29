@@ -32,10 +32,16 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController* rootViewController = [storyboard instantiateInitialViewController];
         self.window.rootViewController = rootViewController;
-    }else { // iPhone 4 or iPad
+    }else if (display.size.height == 1024) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"9.7inch" bundle:nil];
+        UIViewController* rootViewController = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = rootViewController;
+        NSLog(@"iPad");
+    }else { // iPhone 4
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"3.5inch" bundle:nil];
         UIViewController *rootViewController = [storyboard instantiateInitialViewController];
         self.window.rootViewController = rootViewController;
+        NSLog(@"3.5インチ");
     }
     
     // Override point for customization after application launch.

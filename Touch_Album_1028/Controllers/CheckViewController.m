@@ -12,8 +12,8 @@
 #import "DMMovieMaker.h"
 #define TIME 2.4
 #import "DMSideScrollView.h"
-#define BUTTON_WIDTH 80
-#define BUTTON_HEIGHT 80
+#define BUTTON_WIDTH 125
+#define BUTTON_HEIGHT 125
 #import <AVFoundation/AVFoundation.h>
 #import "MBProgressHUD.h"
 #import "ShareMovieViewController.h"
@@ -52,9 +52,9 @@
 
 
 // ページの高さ
-const CGFloat pHeight = 280;
+const CGFloat pHeight = 580;
 // ページの幅
-const CGFloat pWidth  = 280;
+const CGFloat pWidth  = 580;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -134,10 +134,14 @@ const CGFloat pWidth  = 280;
             // UIImageViewのインスタンス
             UIImage *image = tmpArray[i / 2];
             UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            
             CGRect rect = imageView.frame;
+            if ([UIScreen mainScreen].bounds.size.height == 1024) {
             rect.size.height = pHeight;
             rect.size.width = pWidth;
+            }else{
+                rect.size.height = 280;
+                rect.size.width = 280;
+            }
             rect.origin.x = currentX;
             rect.origin.y = 0;//scroll view height
             imageView.frame = rect;
@@ -157,7 +161,12 @@ const CGFloat pWidth  = 280;
             
             currentX = currentX + imageView.bounds.size.width ;
         } else {
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(currentX + 20, 110, 60, 60)];
+            UIButton *button;
+            if ([UIScreen mainScreen].bounds.size.height == 1024){
+            button = [[UIButton alloc] initWithFrame:CGRectMake(currentX + 20, 250, 60, 60)];
+            }else{
+            button = [[UIButton alloc] initWithFrame:CGRectMake(currentX + 20, 110, 60, 60)];
+            }
             UIImage *image = [UIImage imageNamed:@"mark.png"];
             [button setTitle:@" " forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -165,7 +174,11 @@ const CGFloat pWidth  = 280;
             [scrollView addSubview:button];
             currentX = currentX+ 40 + button.bounds.size.width;
         }
+        if ([UIScreen mainScreen].bounds.size.height == 1024){
         [scrollView setContentSize:CGSizeMake( currentX + 20, pHeight)];
+        }else{
+            [scrollView setContentSize:CGSizeMake( currentX + 20, 280)];
+        }
     }
     
     [self.navigationController setNavigationBarHidden:NO animated:NO]; // ナビゲーションバー表示
@@ -329,7 +342,12 @@ const CGFloat pWidth  = 280;
 #pragma mark - Private
 - (void)makeButtons:(int)numberOfButtons {
     for (int i = 0; i < numberOfButtons; i++) {
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((BUTTON_WIDTH * i + 1) +  (20 * (i + 1)) , 0, BUTTON_WIDTH, BUTTON_HEIGHT)];
+        UIButton *button;
+        if ([UIScreen mainScreen].bounds.size.height == 1024){
+        button = [[UIButton alloc] initWithFrame:CGRectMake((BUTTON_WIDTH * i + 1) +  (20 * (i + 1)) , 20, BUTTON_WIDTH, BUTTON_HEIGHT)];
+        }else{
+            button = [[UIButton alloc] initWithFrame:CGRectMake((80 * i + 1) +  (20 * (i + 1)) , 0, 80, 80)];
+        }
         //        [button setTitle:@"Button" forState:UIControlStateNormal];
         [button setTitle:@"Tapped" forState:UIControlStateSelected];
         [button addTarget:self action:@selector(pushButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -346,7 +364,11 @@ const CGFloat pWidth  = 280;
         [buttonscrollView addSubview:button];
         [buttonArray addObject:button];
     }
+    if ([UIScreen mainScreen].bounds.size.height == 1024){
     buttonscrollView.contentSize = CGSizeMake((BUTTON_WIDTH * numberOfButtons) + (23 * numberOfButtons), BUTTON_HEIGHT);
+    }else{
+        buttonscrollView.contentSize = CGSizeMake((80 * numberOfButtons) + (23 * numberOfButtons), 80);
+    }
 }
 
 - (IBAction)backToTop {
