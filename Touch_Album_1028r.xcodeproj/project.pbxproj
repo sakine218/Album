@@ -26,7 +26,6 @@
 		8133CF8C1C60A836000A0AC9 /* hyoushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 8133CF8B1C60A836000A0AC9 /* hyoushi.png */; };
 		8133CF961C60B911000A0AC9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 8133CF951C60B911000A0AC9 /* share.png */; };
 		8167F6791C61962800264BD0 /* transition.png in Resources */ = {isa = PBXBuildFile; fileRef = 8167F6781C61962800264BD0 /* transition.png */; };
-		8167F67D1C61976800264BD0 /* making.png in Resources */ = {isa = PBXBuildFile; fileRef = 8167F67C1C61976800264BD0 /* making.png */; };
 		8167F6801C61ADBC00264BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8167F67E1C61ADBC00264BD0 /* Main.storyboard */; };
 		8167F6821C62F20B00264BD0 /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8167F6811C62F20B00264BD0 /* sample2.mp3 */; };
 		8167F6841C633E8F00264BD0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8167F6831C633E8F00264BD0 /* MediaPlayer.framework */; };
@@ -109,13 +108,18 @@
 		81DD11D61C7DC2EA00BA8106 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */; };
 		81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD11D71C7DCC0C00BA8106 /* guide.png */; };
 		81E40B481C46578B00804108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E40B471C46578B00804108 /* main.m */; };
+		81E8CDDA1D2D237900A3DE01 /* making.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDD91D2D237900A3DE01 /* making.png */; };
+		81E8CDDD1D31F96C00A3DE01 /* makingselectbutton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDDB1D31F96C00A3DE01 /* makingselectbutton1.png */; };
+		81E8CDDE1D31F96C00A3DE01 /* makingselectbutton0.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDDC1D31F96C00A3DE01 /* makingselectbutton0.png */; };
+		81E8CDE81D3F98B100A3DE01 /* makingbutton0-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDE51D3F98B100A3DE01 /* makingbutton0-2.png */; };
+		81E8CDE91D3F98B100A3DE01 /* makingbutton0-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDE61D3F98B100A3DE01 /* makingbutton0-1.png */; };
+		81E8CDEA1D3F98B100A3DE01 /* makingbutton0-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E8CDE71D3F98B100A3DE01 /* makingbutton0-0.png */; };
 		81EF0CF31CB20F2E00234CE8 /* shareicon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF21CB20F2E00234CE8 /* shareicon4.png */; };
 		81EF0CFB1CB254DF00234CE8 /* Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF71CB254DF00234CE8 /* Tutorial4.png */; };
 		81EF0CFC1CB254DF00234CE8 /* Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF81CB254DF00234CE8 /* Tutorial3.png */; };
 		81EF0CFD1CB254DF00234CE8 /* Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CF91CB254DF00234CE8 /* Tutorial2.png */; };
 		81EF0CFE1CB254DF00234CE8 /* Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EF0CFA1CB254DF00234CE8 /* Tutorial1.png */; };
 		81EF0D001CB33C4500234CE8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EF0CFF1CB33C4500234CE8 /* AssetsLibrary.framework */; };
-		81EF0D031CB3427B00234CE8 /* ScrollViewWithBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EF0D021CB3427B00234CE8 /* ScrollViewWithBar.m */; };
 		A8F4367C22EE5F0D060DE6E9 /* libPods-Touch_Album_1028.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A65FD3ADBF0F845FE1218DB0 /* libPods-Touch_Album_1028.a */; };
 /* End PBXBuildFile section */
 
@@ -153,7 +157,6 @@
 		8133CF8B1C60A836000A0AC9 /* hyoushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hyoushi.png; sourceTree = "<group>"; };
 		8133CF951C60B911000A0AC9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		8167F6781C61962800264BD0 /* transition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transition.png; sourceTree = "<group>"; };
-		8167F67C1C61976800264BD0 /* making.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = making.png; sourceTree = "<group>"; };
 		8167F67F1C61ADBC00264BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8167F6811C62F20B00264BD0 /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 		8167F6831C633E8F00264BD0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -267,6 +270,12 @@
 		81DD11D51C7DC2EA00BA8106 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		81DD11D71C7DCC0C00BA8106 /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
 		81E40B471C46578B00804108 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		81E8CDD91D2D237900A3DE01 /* making.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = making.png; sourceTree = "<group>"; };
+		81E8CDDB1D31F96C00A3DE01 /* makingselectbutton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makingselectbutton1.png; sourceTree = "<group>"; };
+		81E8CDDC1D31F96C00A3DE01 /* makingselectbutton0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makingselectbutton0.png; sourceTree = "<group>"; };
+		81E8CDE51D3F98B100A3DE01 /* makingbutton0-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "makingbutton0-2.png"; sourceTree = "<group>"; };
+		81E8CDE61D3F98B100A3DE01 /* makingbutton0-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "makingbutton0-1.png"; sourceTree = "<group>"; };
+		81E8CDE71D3F98B100A3DE01 /* makingbutton0-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "makingbutton0-0.png"; sourceTree = "<group>"; };
 		81EF0CF21CB20F2E00234CE8 /* shareicon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareicon4.png; sourceTree = "<group>"; };
 		81EF0CF71CB254DF00234CE8 /* Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4.png; sourceTree = "<group>"; };
 		81EF0CF81CB254DF00234CE8 /* Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial3.png; sourceTree = "<group>"; };
@@ -393,10 +402,10 @@
 				818503971CF5FCCD003A43BF /* ipadTutorial1.png */,
 				818503981CF5FCCD003A43BF /* ipadTutorial0.png */,
 				8133CF8B1C60A836000A0AC9 /* hyoushi.png */,
+				81E8CDD91D2D237900A3DE01 /* making.png */,
 				812DD39C1C7086FE00EA9EB9 /* menuscreen.png */,
 				8167F7071C67342900264BD0 /* albumscreen.png */,
 				8133CF891C5DED82000A0AC9 /* icon.png */,
-				8167F67C1C61976800264BD0 /* making.png */,
 				8167F6CB1C66E9E800264BD0 /* mark.png */,
 				81DD11B81C7DC1FF00BA8106 /* onpu0.png */,
 				81DD11B91C7DC1FF00BA8106 /* onpu1.png */,
@@ -444,6 +453,11 @@
 				818503A71CF5FDC8003A43BF /* start9.7.png */,
 				818503A91CF5FDDE003A43BF /* newbutton9.7.png */,
 				818503AB1CF5FDEE003A43BF /* guidebutton9.7.png */,
+				81E8CDDC1D31F96C00A3DE01 /* makingselectbutton0.png */,
+				81E8CDDB1D31F96C00A3DE01 /* makingselectbutton1.png */,
+				81E8CDE51D3F98B100A3DE01 /* makingbutton0-2.png */,
+				81E8CDE61D3F98B100A3DE01 /* makingbutton0-1.png */,
+				81E8CDE71D3F98B100A3DE01 /* makingbutton0-0.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -697,6 +711,7 @@
 				8185039D1CF5FCCD003A43BF /* ipadTutorial1.png in Resources */,
 				81DD11D81C7DCC0C00BA8106 /* guide.png in Resources */,
 				8197911D1BE0DD6A00CEDE61 /* Overlay.png in Resources */,
+				81E8CDDA1D2D237900A3DE01 /* making.png in Resources */,
 				81D6D3CF1CE34B97001BA583 /* app3.5-3.png in Resources */,
 				81DD11C11C7DC1FF00BA8106 /* onpu1.png in Resources */,
 				8167F6B51C66E2C300264BD0 /* onpuframe0.png in Resources */,
@@ -707,7 +722,6 @@
 				818503A51CF5FDB5003A43BF /* app9.7-4.png in Resources */,
 				8108E0531C05D74C00040DBE /* Default-736h@3x.png in Resources */,
 				8133CF961C60B911000A0AC9 /* share.png in Resources */,
-				8167F67D1C61976800264BD0 /* making.png in Resources */,
 				818503A31CF5FDB5003A43BF /* app9.7-3.png in Resources */,
 				81EF0CF31CB20F2E00234CE8 /* shareicon4.png in Resources */,
 				81D6D3D01CE34B97001BA583 /* app3.5-2.png in Resources */,
@@ -716,11 +730,13 @@
 				8177F3D21CEEC28C00E29299 /* 9.7inch.storyboard in Resources */,
 				819791171BE0DD6A00CEDE61 /* ELCAssetPicker.xib in Resources */,
 				812DD39D1C7086FE00EA9EB9 /* menuscreen.png in Resources */,
+				81E8CDE91D3F98B100A3DE01 /* makingbutton0-1.png in Resources */,
 				8167F6C71C66E3ED00264BD0 /* onpuframe4.png in Resources */,
 				81EF0CFB1CB254DF00234CE8 /* Tutorial4.png in Resources */,
 				81DD11C71C7DC1FF00BA8106 /* onpu7.png in Resources */,
 				8133CF8A1C5DED82000A0AC9 /* icon.png in Resources */,
 				8167F6791C61962800264BD0 /* transition.png in Resources */,
+				81E8CDE81D3F98B100A3DE01 /* makingbutton0-2.png in Resources */,
 				81DD11C31C7DC1FF00BA8106 /* onpu3.png in Resources */,
 				81BE184F1CB7D79D00BC34DC /* 3.5inch.storyboard in Resources */,
 				818503991CF5FCCD003A43BF /* ipadTutorial5.png in Resources */,
@@ -728,6 +744,7 @@
 				812DD3C01C774BEF00EA9EB9 /* newbutton.png in Resources */,
 				8167F6C81C66E3ED00264BD0 /* onpuframe5.png in Resources */,
 				8108E0521C05D74C00040DBE /* Default-667h@2x.png in Resources */,
+				81E8CDDE1D31F96C00A3DE01 /* makingselectbutton0.png in Resources */,
 				81EF0CFC1CB254DF00234CE8 /* Tutorial3.png in Resources */,
 				81DD11C21C7DC1FF00BA8106 /* onpu2.png in Resources */,
 				81DD11D31C7DC29F00BA8106 /* start.png in Resources */,
@@ -737,6 +754,7 @@
 				8167F6C91C66E3ED00264BD0 /* onpuframe6.png in Resources */,
 				8185039A1CF5FCCD003A43BF /* ipadTutorial4.png in Resources */,
 				812DD3BA1C7720F000EA9EB9 /* Tutorial5.png in Resources */,
+				81E8CDEA1D3F98B100A3DE01 /* makingbutton0-0.png in Resources */,
 				81DD11C41C7DC1FF00BA8106 /* onpu4.png in Resources */,
 				818503AC1CF5FDEE003A43BF /* guidebutton9.7.png in Resources */,
 				81DD11C61C7DC1FF00BA8106 /* onpu6.png in Resources */,
@@ -754,6 +772,7 @@
 				8167F6C51C66E3ED00264BD0 /* onpuframe2.png in Resources */,
 				81D6D3D11CE34B97001BA583 /* app3.5-1.png in Resources */,
 				81DD11CF1C7DC29700BA8106 /* sampleOk.mp3 in Resources */,
+				81E8CDDD1D31F96C00A3DE01 /* makingselectbutton1.png in Resources */,
 				818503A41CF5FDB5003A43BF /* app9.7-2.png in Resources */,
 				819790C21BE0DCAB00CEDE61 /* Images.xcassets in Resources */,
 				8167F6D01C66EBA900264BD0 /* seen.png in Resources */,
@@ -845,7 +864,6 @@
 				8167F7111C6B49C800264BD0 /* SocialVideoHelper.m in Sources */,
 				81DD11D61C7DC2EA00BA8106 /* MBProgressHUD.m in Sources */,
 				819791111BE0DD6A00CEDE61 /* ELCAssetCell.m in Sources */,
-				81EF0D031CB3427B00234CE8 /* ScrollViewWithBar.m in Sources */,
 				8197910E1BE0DD6A00CEDE61 /* CheckViewController.m in Sources */,
 				81CD90671C2A8FB40038A565 /* DMMovieMaker.m in Sources */,
 				819790E91BE0DD5D00CEDE61 /* AppDelegate.m in Sources */,
@@ -991,7 +1009,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3590b33d-e74d-42f9-991e-e8876e85a92f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1008,7 +1026,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sakine.memorie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3590b33d-e74d-42f9-991e-e8876e85a92f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

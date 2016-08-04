@@ -63,17 +63,17 @@
 {
     if(barView == nil){
         barView = [[UIView alloc] init];
-        UIColor * barColor = [UIColor colorWithWhite:0.0 alpha:0.7];
-        UIColor * backColor = [UIColor colorWithWhite:0.7 alpha:0.5];
+        UIColor * barColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+//        UIColor * backColor = [UIColor colorWithWhite:0.0 alpha:0.3];
         [barView setBackgroundColor:barColor];
         [[barView layer] setCornerRadius:3.0f];
         [[barView layer] setMasksToBounds:YES];
-        [[barView layer] setBorderWidth:1.0f];
-        [[barView layer] setBorderColor:backColor.CGColor];
+//        [[barView layer] setBorderWidth:1.0f];
+//        [[barView layer] setBorderColor:backColor.CGColor];
         
         [self addSubview:barView];
-        barColor = nil;
-        backColor = nil;
+//        barColor = nil;
+//        backColor = nil;
     }else{
         [self bringSubviewToFront:barView];
     }

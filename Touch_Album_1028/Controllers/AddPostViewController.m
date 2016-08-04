@@ -37,10 +37,12 @@
 }
 
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info{
+    
     if (info.count < 1) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"画像を選択してください"
                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         return;
     }
 //    [self.view bringSubviewToFront:ELCOverlayImageView];

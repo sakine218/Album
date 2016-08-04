@@ -105,6 +105,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="making.png" translatesAutoresizingMaskIntoConstraints="NO" id="rcg-KC-lMx">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yih-3f-Beu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-1W-3ZB">
                                 <rect key="frame" x="0.0" y="19" width="320" height="44"/>
                                 <items>
@@ -113,29 +116,32 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-4x-5Ph" customClass="ScrollViewWithBar">
-                                <rect key="frame" x="0.0" y="478" width="320" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="9q1-Bb-0E0"/>
-                                </constraints>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-4x-5Ph" customClass="ScrollViewWithBar">
+                                <rect key="frame" x="0.0" y="445" width="320" height="90"/>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-yJ-Uwn" customClass="ScrollViewWithBar">
-                                <rect key="frame" x="20" y="160" width="280" height="280"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-yJ-Uwn" customClass="ScrollViewWithBar">
+                                <rect key="frame" x="20" y="140" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="2Tr-qM-SKX"/>
                                     <constraint firstAttribute="width" constant="280" id="oEa-2v-X6B"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JS-5I-OTs">
+                                <rect key="frame" x="158" y="533" width="162" height="35"/>
+                                <state key="normal" title="　　　　　　　　　　"/>
+                                <connections>
+                                    <action selector="speedbutton" destination="Bbu-rx-YX0" eventType="touchUpInside" id="7Px-SQ-gAq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k1-nh-9xj">
+                                <rect key="frame" x="0.0" y="533" width="158" height="35"/>
+                                <state key="normal" title="   　　　　　　　"/>
+                                <connections>
+                                    <action selector="musicbutton:" destination="Bbu-rx-YX0" eventType="touchUpInside" id="st1-6z-cDS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gJy-yJ-Uwn" firstAttribute="top" secondItem="KYQ-uH-K2j" secondAttribute="bottom" constant="96" id="81L-RN-FBV"/>
-                            <constraint firstItem="Zee-4x-5Ph" firstAttribute="top" secondItem="gJy-yJ-Uwn" secondAttribute="bottom" constant="38" id="VPM-VW-MmM"/>
-                            <constraint firstItem="Zee-4x-5Ph" firstAttribute="leading" secondItem="6Aq-Ft-FcT" secondAttribute="leading" id="VrE-Gx-sJx"/>
-                            <constraint firstItem="TOa-mE-QVG" firstAttribute="top" secondItem="Zee-4x-5Ph" secondAttribute="bottom" id="ZGT-hu-M20"/>
-                            <constraint firstItem="gJy-yJ-Uwn" firstAttribute="leading" secondItem="6Aq-Ft-FcT" secondAttribute="leading" constant="20" id="h03-ie-MUk"/>
-                            <constraint firstAttribute="trailing" secondItem="Zee-4x-5Ph" secondAttribute="trailing" id="w4a-cu-RhE"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eBB-6d-RNn">
@@ -153,8 +159,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonimageView" destination="yih-3f-Beu" id="hMk-N5-3gh"/>
                         <outlet property="buttonscrollView" destination="Zee-4x-5Ph" id="jeg-iX-0iy"/>
+                        <outlet property="musicbutton" destination="4k1-nh-9xj" id="Bqc-md-GlN"/>
                         <outlet property="scrollView" destination="gJy-yJ-Uwn" id="cie-X9-bUL"/>
+                        <outlet property="speedbutton" destination="4JS-5I-OTs" id="6Wc-Vq-J10"/>
                         <segue destination="n0q-5Y-dmy" kind="push" identifier="toPreview" id="7mh-4s-6e8"/>
                     </connections>
                 </viewController>

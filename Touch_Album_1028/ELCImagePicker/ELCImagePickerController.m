@@ -91,7 +91,9 @@
 
 - (void)selectedAssets:(NSArray *)assets
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if (assets.count != 0){
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
     NSMutableArray *returnArray = [[NSMutableArray alloc] init];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // バックグランドでAPIなどを実行

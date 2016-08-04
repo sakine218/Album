@@ -26,6 +26,9 @@
 // AddsubView, NSTimer
 
 @implementation CheckViewController {
+    
+    UIImageView *imageView;
+    
     NSMutableArray *imageArray;
     IBOutlet ScrollViewWithBar *scrollView;
     NSMutableArray *buttonImageArray;
@@ -39,9 +42,17 @@
     NSMutableArray *buttonArray;
     IBOutlet ScrollViewWithBar *buttonscrollView;
     NSArray *imagepath;
+    IBOutlet UIImageView *buttonimageView;
+    IBOutlet UIButton *musicbutton;
+    IBOutlet UIButton *speedbutton;
+    
+    IBOutlet UIView *uv;
+    
+    float duration;
+
     
     //  BGMのため
-//    AVAudioPlayer *player;
+    //    AVAudioPlayer *player;
     NSError *error;
     NSString *path;
     NSURL *url;
@@ -58,6 +69,14 @@ const CGFloat pWidth  = 580;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    buttonscrollView.hidden = NO;
+    
+    [self makeView];
+    uv.hidden = YES;
+    
+    buttonimageView.image = [UIImage imageNamed:@"makingselectbutton0.png"];
+    
     
     scrollView.showsHorizontalScrollIndicator = NO;
     buttonscrollView.showsHorizontalScrollIndicator = NO;
@@ -185,6 +204,57 @@ const CGFloat pWidth  = 580;
     
 }
 
+-(IBAction)musicbutton: (UIButton *) sender{
+    buttonimageView.image = [UIImage imageNamed:@"makingselectbutton0.png"];
+    NSLog(@"みそしる");
+    uv.hidden = YES;
+    buttonscrollView.hidden = NO;
+}
+
+-(IBAction)speedbutton{
+    buttonimageView.image = [UIImage imageNamed:@"makingselectbutton1.png"];
+    NSLog(@"おしるこ");
+    buttonimageView.image = [UIImage imageNamed:@"makingbutton0-0.png"];
+    uv.hidden = NO;
+    buttonscrollView.hidden = YES;
+    [self.audioPlayer stop];
+}
+
+-(void)makeView{
+    uv = [[UIView alloc]initWithFrame:CGRectMake(0,445,320,90)];
+    UIButton *btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn0.frame = CGRectMake(20,5,80,80);
+    NSLog(@"まぐろ");
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.frame = CGRectMake(120,5,80,80);
+    NSLog(@"さーもん");
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn2.frame = CGRectMake(220,5,80,80);
+    NSLog(@"なっとう");
+    [uv addSubview:btn0];
+    [uv addSubview:btn1];
+    [uv addSubview:btn2];
+    [self.view addSubview:uv];
+    [btn0 addTarget:self action:@selector(btn0Pushed)forControlEvents:UIControlEventTouchDown];
+    [btn1 addTarget:self action:@selector(btn1Pushed)forControlEvents:UIControlEventTouchDown];
+    [btn2 addTarget:self action:@selector(btn2Pushed)forControlEvents:UIControlEventTouchDown];
+}
+
+-(void)btn0Pushed{
+    buttonimageView.image = [UIImage imageNamed:@"makingbutton0-1.png"];
+    duration = 3;
+}
+
+-(void)btn1Pushed{
+    buttonimageView.image = [UIImage imageNamed:@"makingbutton0-0.png"];
+    duration = 2;
+}
+
+-(void)btn2Pushed{
+    buttonimageView.image = [UIImage imageNamed:@"makingbutton0-2.png"];
+    duration = 1;
+}
+
 - (void)pushButton: (UIButton *)button{
     
     NSLog(@"Button Tag == %ld", button.tag);
@@ -310,7 +380,7 @@ const CGFloat pWidth  = 580;
 -(IBAction)okButton:(UIBarButtonItem *)savemovieButton {
     [self.audioPlayer stop];
     url = [[NSURL alloc] initFileURLWithPath:path];
-    [DMMovieMaker makeMovieWithImages:tmpArray withAudio:url];
+    [DMMovieMaker makeMovieWithImages:tmpArray withAudio:url withduration:duration];
 }
 
 - (void)toNext:(NSNotificationCenter *)notificationCenter {

@@ -20,5 +20,5 @@
 + (UIImage *)resizedImage:(UIImage *)image width:(CGFloat)width height:(CGFloat)height;
 
 + (void)mergeAudio:(NSURL *)audioURL withVideo:(NSURL *)videoURL;
-+ (void)makeMovieWithImages:(NSArray *)images withAudio:(NSURL *)audioURL;
++ (void)makeMovieWithImages:(NSArray *)images withAudio:(NSURL *)audioURL withduration:(float)duration;
 @end

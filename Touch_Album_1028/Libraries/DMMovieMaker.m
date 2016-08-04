@@ -32,7 +32,7 @@ const int kVideoFPS = 24;
 
 
 #pragma mark - Make a movie from image Array
-+ (void)makeMovieWithImages:(NSArray *)images withAudio:(NSURL *)audioURL {
++ (void)makeMovieWithImages:(NSArray *)images withAudio:(NSURL *)audioURL withduration:(float)duration {
     // [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     // [SVProgressHUD showWithStatus:@"書き出し中..."];
     
@@ -102,7 +102,7 @@ const int kVideoFPS = 24;
     CVPixelBufferRef buffer = NULL;
     
     int frameCount = 0;
-    int durationForEachImage = 1;
+    int durationForEachImage = duration;
     int32_t fps = 24;
     
     for (__weak UIImage *image in images) {
@@ -115,7 +115,7 @@ const int kVideoFPS = 24;
         if (adaptor.assetWriterInput.readyForMoreMediaData == NO) {
             NSLog(@"なんかうまくいきません、ごめんなさい");
         }else {
-            CMTime frameTime = CMTimeMake((int64_t)frameCount * fps * durationForEachImage, fps);
+            CMTime frameTime = CMTimeMake((int64_t)frameCount * fps * durationForEachImage, fps*2);
             // TODO: ここの調整(リサイズ後なのかそのままでいいのか)
             // UIImage *resizedImage = [self cropRectImage:image];
             buffer = [self pixelBufferFromCGImage:image.CGImage withOriginImage:image];
